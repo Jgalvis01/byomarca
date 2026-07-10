@@ -1,124 +1,115 @@
-import ProductCard from '../components/ProductCard';
-import ProductViewer from '../components/ProductViewer';
+import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
+import ProductOptionsViewer from '../components/ProductOptionsViewer';
 import AnimatedBadge from '../components/AnimatedBadge';
 
 const ProductCatalog = () => {
   const products = [
     {
-      name: 'Kento con Ruedas',
-      description: 'Silla clínica reclinable con sistema de movilidad integrado. Ideal para salas de diálisis y quimioterapia.',
-      features: ['Reclinación 180°', 'Ruedas hospitalarias', 'Respaldo ajustable', 'Bandeja incluida'],
-      image: '/images/Gemini_Generated_Image_2sgipy2sgipy2sgi.png',
-      category: 'Sillas Clínicas',
+      name: 'SR10D, SR10R, SR20D, SR20R',
+      description: '',
+      features: [],
+      image: '/images/kento.png',
+      images: [
+        '/images/kento.png',
+        '/images/kento1.png',
+        '/images/kento2.png',
+        '/images/kento3.png',
+        '/images/nagy.png',
+        '/images/nagy1.png',
+        '/images/nagy2.png',
+        '/images/nagy3.png',
+      ],
+      category: 'Sillas Reclinomáticas',
     },
     {
-      name: 'Kento Fija',
-      description: 'Silla clínica estática con base reforzada. Perfecta para observación y recuperación.',
-      features: ['Base reforzada', 'Reclinación 160°', 'Material antibacterial', 'Fácil limpieza'],
-      image: '/images/Gemini_Generated_Image_xmyg9axmyg9axmyg.png',
-      category: 'Sillas Clínicas',
+      name: 'SC100',
+      description: '',
+      features: [],
+      image: '/images/PR1.jpg',
+      images: [
+        '/images/PR1.jpg',
+        '/images/PR2.jpg',
+        '/images/PR3.jpg',
+        '/images/PR4.jpg',
+      ],
+      category: 'Sofá Camas',
     },
     {
-      name: 'Nagy con Ruedas',
-      description: 'Silla de lactancia móvil con diseño ergonómico. Confort para madre y bebé.',
-      features: ['Ergonómica', 'Ruedas silenciosas', 'Reposabrazos acolchados', 'Fácil maniobra'],
-      image: '/images/Gemini_Generated_Image_w4ouww4ouww4ouww.png',
-      category: 'Sillas de Lactancia',
-    },
-    {
-      name: 'Nagy Fija',
-      description: 'Silla de lactancia estática con diseño premium. Espacios de lactancia confortables.',
-      features: ['Diseño premium', 'Tejido hipoalergénico', 'Soporte lumbar', 'Estabilidad total'],
-      image: '/images/PR8.jpg',
-      category: 'Sillas de Lactancia',
-    },
-
-  ];
-
-  const productImages = [
-    {
-      id: 1,
-      src: '/images/PR4.jpg',
-      alt: 'Vista frontal',
-      feature: 'Diseño Ergonómico',
-      description: 'Forma anatómica que se adapta al cuerpo del paciente, reduciendo puntos de presión y mejorando la circulación.',
-    },
-    {
-      id: 2,
-      src: '/images/Gemini_Generated_Image_2s62n52s62n52s62.png',
-      alt: 'Sistema reclinable',
-      feature: 'Sistema Reclinable',
-      description: 'Mecanismo de reclinación suave de 5 posiciones, desde posición sentada hasta casi horizontal para máximo confort.',
-    },
-    {
-      id: 3,
-      src: '/images/Gemini_Generated_Image_6075tb6075tb6075.png',
-      alt: 'Material antibacterial',
-      feature: 'Material Antibacterial',
-      description: 'Tejidos tratados con tecnología antimicrobiana que previene la proliferación de bacterias y facilita la desinfección.',
-    },
-    {
-      id: 4,
-      src: '/images/Gemini_Generated_Image_1tpx8x1tpx8x1tpx.png',
-      alt: 'Ruedas hospitalarias',
-      feature: 'Ruedas Hospitalarias',
-      description: 'Ruedas de grado médico con sistema de freno integrado, silenciosas y fáciles de maniobrar en cualquier superficie.',
+      name: 'SE1, SE2',
+      description: '',
+      features: [],
+      image: '/images/PR5.jpg',
+      images: [
+        '/images/PR5.jpg',
+        '/images/PR6.jpg',
+        '/images/PR7.jpg',
+        '/images/PR8.jpg',
+      ],
+      category: 'Salas de Espera',
     },
   ];
 
   return (
-    <section id="products" className="py-24 bg-black relative">
+    <section id="catalogo" className="py-24 bg-white relative">
+      {/* Subtle decorative elements for light mode */}
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-blue-500/20 to-transparent" />
+      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-blue-500/20 to-transparent" />
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center mb-16">
+        <motion.div
+          className="text-center mb-16"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-100px' }}
+          transition={{ duration: 0.7, ease: 'easeOut' }}
+        >
           <div className="mb-6 flex justify-center">
-            <AnimatedBadge text="Catálogo 2024" variant="cyan" />
+            <AnimatedBadge text="Catálogo" variant="blue" />
           </div>
           <h2 className="text-4xl md:text-5xl font-bold font-montserrat mb-6">
-            <span className="text-white">Nuestros </span>
-            <span className="text-gradient">Productos</span>
+            <span className="text-gray-900">Opciones </span>
+            <span className="text-gradient">LEBRAU</span>
           </h2>
-          <div className="h-1 w-24 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full mx-auto mb-8" />
-          <p className="text-gray-400 max-w-2xl mx-auto text-lg leading-relaxed">
-            Soluciones de mobiliario clínico diseñadas para hospitales, clínicas y
-            centros de salud que exigen calidad premium y funcionalidad.
-          </p>
-        </div>
+          <div className="h-1 w-24 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full mx-auto mb-8" />
+        </motion.div>
 
-        {/* Interactive Product Viewer */}
-        <div className="mb-20">
-          <ProductViewer
-            images={productImages}
-            productName="Silla Clínica Kento"
+        {/* Interactive Product Options */}
+        <motion.div
+          className="mb-20"
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-100px' }}
+          transition={{ duration: 0.8, ease: 'easeOut' }}
+        >
+          <ProductOptionsViewer
+            options={products.map((product, index) => ({
+               id: index + 1,
+               ...product,
+            }))}
           />
-        </div>
-
-        {/* Products Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {products.map((product, index) => (
-            <ProductCard
-              key={index}
-              name={product.name}
-              description={product.description}
-              features={product.features}
-              image={product.image}
-              category={product.category}
-            />
-          ))}
-        </div>
+        </motion.div>
 
         {/* Bottom CTA */}
-        <div className="mt-16 text-center">
-          <p className="text-gray-400 mb-6">
+        <motion.div
+          className="mt-16 text-center"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+        >
+          <p className="text-gray-700 mb-6 font-medium text-lg">
             ¿Necesitas una solución personalizada? Contáctanos para cotizaciones especiales.
           </p>
-          <a
-            href="#contact"
-            className="inline-flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors font-medium"
+          <Link
+            to="/contacto"
+            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+            className="inline-flex items-center space-x-2 text-blue-600 hover:text-blue-700 transition-colors font-semibold text-xl"
           >
             <span>Solicitar cotización</span>
             <svg
-              className="w-5 h-5"
+              className="w-7 h-7"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -130,8 +121,8 @@ const ProductCatalog = () => {
                 d="M17 8l4 4m0 0l-4 4m4-4H3"
               />
             </svg>
-          </a>
-        </div>
+          </Link>
+        </motion.div>
       </div>
     </section>
   );

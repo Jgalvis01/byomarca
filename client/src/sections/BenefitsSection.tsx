@@ -1,5 +1,23 @@
+import { motion } from 'framer-motion';
 import FeatureCard from '../components/FeatureCard';
 import AnimatedBadge from '../components/AnimatedBadge';
+
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: { staggerChildren: 0.1 },
+  },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6, ease: 'easeOut' as const },
+  },
+};
 
 const BenefitsSection = () => {
   const benefits = [
@@ -63,7 +81,13 @@ const BenefitsSection = () => {
     <section id="benefits" className="py-24 bg-gradient-to-b from-black via-blue-950/10 to-black relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center mb-16">
+        <motion.div
+          className="text-center mb-16"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-100px' }}
+          transition={{ duration: 0.7, ease: 'easeOut' }}
+        >
           <div className="mb-6 flex justify-center">
             <AnimatedBadge text="Por qué elegirnos" variant="cyan" />
           </div>
@@ -77,22 +101,35 @@ const BenefitsSection = () => {
             sector salud, ofreciendo soluciones que combinan innovación, calidad y
             confort.
           </p>
-        </div>
+        </motion.div>
 
         {/* Bento Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <motion.div
+          className="grid md:grid-cols-2 lg:grid-cols-3 gap-6"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: '-100px' }}
+        >
           {benefits.map((benefit, index) => (
-            <FeatureCard
-              key={index}
-              icon={benefit.icon}
-              title={benefit.title}
-              description={benefit.description}
-            />
+            <motion.div key={index} variants={itemVariants}>
+              <FeatureCard
+                icon={benefit.icon}
+                title={benefit.title}
+                description={benefit.description}
+              />
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
 
         {/* Additional Info */}
-        <div className="mt-16 glass-card rounded-3xl p-8 md:p-12">
+        <motion.div
+          className="mt-16 glass-card rounded-3xl p-8 md:p-12"
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-100px' }}
+          transition={{ duration: 0.8, ease: 'easeOut' }}
+        >
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <div>
               <h3 className="text-2xl font-bold text-white mb-4">
@@ -124,26 +161,32 @@ const BenefitsSection = () => {
                 </li>
               </ul>
             </div>
-            <div className="grid grid-cols-2 gap-4">
-              <div className="glass-card rounded-2xl p-6 text-center">
+            <motion.div
+              className="grid grid-cols-2 gap-4"
+              variants={containerVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: '-50px' }}
+            >
+              <motion.div variants={itemVariants} className="glass-card rounded-2xl p-6 text-center">
                 <div className="text-4xl font-bold text-cyan-400 mb-2">500+</div>
                 <div className="text-sm text-gray-500">Proyectos Exitosos</div>
-              </div>
-              <div className="glass-card rounded-2xl p-6 text-center">
+              </motion.div>
+              <motion.div variants={itemVariants} className="glass-card rounded-2xl p-6 text-center">
                 <div className="text-4xl font-bold text-cyan-400 mb-2">50+</div>
                 <div className="text-sm text-gray-500">Clínicas Atendidas</div>
-              </div>
-              <div className="glass-card rounded-2xl p-6 text-center">
+              </motion.div>
+              <motion.div variants={itemVariants} className="glass-card rounded-2xl p-6 text-center">
                 <div className="text-4xl font-bold text-cyan-400 mb-2">100%</div>
                 <div className="text-sm text-gray-500">Satisfacción</div>
-              </div>
-              <div className="glass-card rounded-2xl p-6 text-center">
+              </motion.div>
+              <motion.div variants={itemVariants} className="glass-card rounded-2xl p-6 text-center">
                 <div className="text-4xl font-bold text-cyan-400 mb-2">24h</div>
                 <div className="text-sm text-gray-500">Respuesta Rápida</div>
-              </div>
-            </div>
+              </motion.div>
+            </motion.div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 interface CTAButtonProps {
   text: string;
   href: string;
@@ -25,10 +27,30 @@ const CTAButton = ({
       'border-2 border-cyan-500/50 text-cyan-400 hover:bg-cyan-500/10 hover:border-cyan-500 hover:scale-105',
   };
 
+  const className = `${baseStyles} ${variantStyles[variant]}`;
+
+  // Use Link for internal routes (starting with /)
+  if (href.startsWith('/')) {
+    return (
+      <Link
+        to={href}
+        className={className}
+        onClick={() => {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+          onClick?.();
+        }}
+      >
+        {icon && <span>{icon}</span>}
+        <span>{text}</span>
+      </Link>
+    );
+  }
+
+  // Use <a> for external URLs or anchors
   return (
     <a
       href={href}
-      className={`${baseStyles} ${variantStyles[variant]}`}
+      className={className}
       onClick={onClick}
     >
       {icon && <span>{icon}</span>}

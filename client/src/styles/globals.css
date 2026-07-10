@@ -1,20 +1,58 @@
 @import "tailwindcss";
 
+/* ============================================
+   BYOMARCA — Global Styles
+   Palette: black (#000), electric blue (#0088FF / #00BFFF), white
+   Font: Montserrat
+   ============================================ */
+
+/* Base Typography */
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 19px;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Justify all paragraph text */
+p, .text-justify {
+  text-align: justify;
+}
+
+/* Improve white text legibility */
+.text-white {
+  font-weight: 500;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Text gradient — electric blue, no green */
+.text-gradient {
+  background: linear-gradient(135deg, #00BFFF 0%, #0066FF 50%, #00BFFF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
 /* Custom Effects */
 .glass-card {
   background: rgba(10, 15, 25, 0.7);
   backdrop-filter: blur(14px);
-  border: 1px solid rgba(36, 245, 252, 0.15);
+  border: 1px solid rgba(0, 136, 255, 0.15);
 }
 
 .blue-glow:hover {
   box-shadow:
-    0 0 20px rgba(36, 245, 252, 0.25),
-    0 0 40px rgba(4, 166, 247, 0.15);
+    0 0 20px rgba(0, 136, 255, 0.3),
+    0 0 40px rgba(0, 102, 255, 0.15);
 }
 
 .neon-border {
-  border: 1px solid rgba(36, 245, 252, 0.2);
+  border: 1px solid rgba(0, 136, 255, 0.2);
 }
 
 .dark-surface {
@@ -35,10 +73,10 @@
 
 @keyframes glow {
   0%, 100% {
-    box-shadow: 0 0 20px rgba(36, 245, 252, 0.3);
+    box-shadow: 0 0 20px rgba(0, 136, 255, 0.3);
   }
   50% {
-    box-shadow: 0 0 40px rgba(36, 245, 252, 0.6);
+    box-shadow: 0 0 40px rgba(0, 136, 255, 0.6);
   }
 }
 
@@ -53,7 +91,7 @@
 
 .animate-fade-in {
   animation: fadeIn 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-  opacity: 0; /* Asegura que empiece oculto */
+  opacity: 0;
 }
 
 .animate-glow {
@@ -71,11 +109,11 @@
 
 /* Typography */
 .font-inter {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .font-poppins {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .font-montserrat {
@@ -92,10 +130,15 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #24F5FC;
+  background: #0088FF;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #04A6F7;
+  background: #0066FF;
+}
+
+/* Background gradient radial for hero */
+.bg-gradient-radial {
+  background: radial-gradient(ellipse at center, rgba(0, 100, 255, 0.15) 0%, transparent 70%);
 }

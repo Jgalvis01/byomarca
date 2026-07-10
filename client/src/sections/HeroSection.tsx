@@ -1,113 +1,197 @@
-import CTAButton from '../components/CTAButton';
-import AnimatedBadge from '../components/AnimatedBadge';
+import { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const HeroSection = () => {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+      className="relative h-[200vh]"
     >
+      <div className="sticky top-0 h-screen flex flex-col items-center justify-center overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 bg-black">
         {/* Gradient Overlay */}
-        <div className="absolute inset-0 bg-gradient-radial opacity-60" />
+        <motion.div
+          className="absolute inset-0 bg-gradient-radial opacity-60"
+          animate={{
+            opacity: [0.5, 0.7, 0.5],
+          }}
+          transition={{
+            duration: 5,
+            repeat: Infinity,
+            ease: 'easeInOut',
+          }}
+        />
 
         {/* Grid Pattern */}
         <div
           className="absolute inset-0 opacity-10"
           style={{
-            backgroundImage: `linear-gradient(rgba(36, 245, 252, 0.1) 1px, transparent 1px),
-              linear-gradient(90deg, rgba(36, 245, 252, 0.1) 1px, transparent 1px)`,
+            backgroundImage: `linear-gradient(rgba(0, 136, 255, 0.1) 1px, transparent 1px),
+              linear-gradient(90deg, rgba(0, 136, 255, 0.1) 1px, transparent 1px)`,
             backgroundSize: '50px 50px',
           }}
         />
 
         {/* Floating Particles */}
-        <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-cyan-500 rounded-full animate-float opacity-50" />
-        <div
-          className="absolute top-1/3 right-1/4 w-3 h-3 bg-blue-500 rounded-full animate-float opacity-30"
-          style={{ animationDelay: '1s' }}
+        <motion.div
+          className="absolute top-1/4 left-1/4 w-2 h-2 bg-blue-500 rounded-full opacity-50"
+          animate={{
+            y: [0, -20, 0],
+            x: [0, 10, 0],
+            opacity: [0.3, 0.7, 0.3],
+          }}
+          transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
         />
-        <div
-          className="absolute bottom-1/4 left-1/3 w-2 h-2 bg-cyan-400 rounded-full animate-float opacity-40"
-          style={{ animationDelay: '2s' }}
+        <motion.div
+          className="absolute top-1/3 right-1/4 w-3 h-3 bg-blue-600 rounded-full opacity-30"
+          animate={{
+            y: [0, -15, 0],
+            x: [0, -8, 0],
+            opacity: [0.2, 0.5, 0.2],
+          }}
+          transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut', delay: 1 }}
+        />
+        <motion.div
+          className="absolute bottom-1/4 left-1/3 w-2 h-2 bg-blue-400 rounded-full opacity-40"
+          animate={{
+            y: [0, -18, 0],
+            opacity: [0.2, 0.6, 0.2],
+          }}
+          transition={{ duration: 3.5, repeat: Infinity, ease: 'easeInOut', delay: 2 }}
         />
       </div>
 
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        {/* Badge */}
-        <div className="mb-8 flex justify-center">
-          <AnimatedBadge text="Productos Clínicos Premium" variant="cyan" />
-        </div>
-
-        {/* Main Logo */}
+        {/* Main Logo with effects */}
         <div className="flex justify-center mb-6">
-          <img 
-            src="/images/LOGO BYOMARCA1 (1).png" 
-            alt="BYOMARCA" 
-            className="w-full max-w-3xl h-auto drop-shadow-[0_0_15px_rgba(36,245,252,0.5)] animate-fade-in"
-            style={{ animationDuration: '2.5s', animationDelay: '0.3s' }}
-          />
+          <div className="relative">
+            {/* Glow behind logo */}
+            <motion.div
+              className="absolute inset-0 flex items-center justify-center pointer-events-none"
+              animate={{
+                scale: [1, 1.1, 1],
+                opacity: [0.4, 0.7, 0.4],
+              }}
+              transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
+            >
+              <div className="w-[80%] h-[80%] bg-blue-500/20 blur-3xl rounded-full" />
+            </motion.div>
+
+            {/* Orbiting particles */}
+            <motion.div
+              className="absolute top-1/2 left-1/2 w-4 h-4 -ml-2 -mt-2 border border-blue-400/50 rounded-full"
+              animate={{
+                x: [0, 120, 0, -120, 0],
+                y: [60, 0, -60, 0, 60],
+                opacity: [0.3, 0.8, 0.3, 0.8, 0.3],
+                scale: [0.8, 1.2, 0.8, 1.2, 0.8],
+              }}
+              transition={{ duration: 8, repeat: Infinity, ease: 'easeInOut' }}
+            />
+            <motion.div
+              className="absolute top-1/2 left-1/2 w-3 h-3 -ml-1.5 -mt-1.5 border border-blue-400/40 rounded-full bg-blue-400/10"
+              animate={{
+                x: [0, -100, 0, 100, 0],
+                y: [-40, 0, 40, 0, -40],
+                opacity: [0.4, 0.7, 0.4, 0.7, 0.4],
+              }}
+              transition={{ duration: 10, repeat: Infinity, ease: 'easeInOut', delay: 1 }}
+            />
+            <motion.div
+              className="absolute top-1/2 left-1/2 w-2 h-2 -ml-1 -mt-1 bg-blue-300/30 rounded-full"
+              animate={{
+                x: [50, -80, 50],
+                y: [30, -50, 30],
+                opacity: [0.2, 0.6, 0.2],
+              }}
+              transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut', delay: 2 }}
+            />
+
+            {/* Shimmer effect */}
+            <motion.div
+              className="absolute inset-0 overflow-hidden rounded-lg pointer-events-none z-20"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 1 }}
+            >
+              <motion.div
+                className="absolute inset-y-0 w-1/3 bg-gradient-to-r from-transparent via-white/15 to-transparent skew-x-[-20deg]"
+                animate={{
+                  x: ['-150%', '400%'],
+                }}
+                transition={{
+                  duration: 3,
+                  repeat: Infinity,
+                  repeatDelay: 4,
+                  ease: 'easeInOut',
+                }}
+              />
+            </motion.div>
+
+            {/* Logo image with float */}
+            <motion.img
+              src="/images/LOGO BYOMARCA1 (1).png"
+              alt="BYOMARCA"
+              className="relative z-10 w-full max-w-3xl h-auto"
+              style={{
+                filter: 'drop-shadow(0 0 20px rgba(0,136,255,0.5))',
+              }}
+              initial={{ opacity: 0, y: 30 }}
+              animate={{
+                opacity: 1,
+                y: [0, -12, 0],
+              }}
+              transition={{
+                opacity: { duration: 1, ease: 'easeOut' },
+                y: { duration: 3.5, repeat: Infinity, ease: 'easeInOut', delay: 1 },
+              }}
+            />
+          </div>
         </div>
 
-        {/* Subtitle */}
-        <p className="text-lg md:text-xl text-gray-400 max-w-3xl mx-auto mb-12 leading-relaxed">
-          Diseñamos y fabricamos sillas clínicas y mobiliario hospitalario de
-          alta categoria. Tecnología avanzada, confort excepcional y calidad premium
-          para instituciones de salud que exigen lo mejor.
-        </p>
-
-        {/* CTA Buttons */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-16">
-          <CTAButton
-            text="Ver Catálogo"
-            href="#products"
-            variant="primary"
-            icon={
-              <svg
-                className="w-5 h-5"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
+        {/* Text Container with AnimatePresence */}
+        <div className="relative h-24 flex items-center justify-center w-full mt-6">
+          <AnimatePresence mode="wait">
+            {!isScrolled ? (
+              <motion.h2
+                key="slogan"
+                className="absolute text-2xl md:text-3xl lg:text-4xl font-bold text-white tracking-wide"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -20 }}
+                transition={{ duration: 0.5, ease: 'easeOut' }}
               >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
-                />
-              </svg>
-            }
-          />
-          <CTAButton
-            text="Contáctanos"
-            href="#contact"
-            variant="outline"
-            icon={
-              <svg
-                className="w-5 h-5"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
+                Calidad que refleja compromiso
+              </motion.h2>
+            ) : (
+              <motion.p
+                key="description"
+                className="absolute text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed font-medium text-center px-4"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -20 }}
+                transition={{ duration: 0.5, ease: 'easeOut' }}
               >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-                />
-              </svg>
-            }
-          />
+                Ofrecemos productos y mobiliario clínico, integrando tecnología avanzada
+                y estándares de calidad. Cada solución refleja nuestro compromiso con la
+                excelencia para entidades de salud que buscan lo mejor.
+              </motion.p>
+            )}
+          </AnimatePresence>
         </div>
       </div>
-
-      {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
-        <div className="w-6 h-10 border-2 border-cyan-500/50 rounded-full flex items-start justify-center p-2">
-          <div className="w-1.5 h-3 bg-cyan-500 rounded-full animate-bounce" />
-        </div>
       </div>
     </section>
   );
