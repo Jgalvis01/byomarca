@@ -7,6 +7,11 @@ import LebrauPage from './pages/LebrauPage';
 import ContactoPage from './pages/ContactoPage';
 import OtrasMarcasPage from './pages/OtrasMarcasPage';
 import NosotrosPage from './pages/NosotrosPage';
+import GmdProductosPage from './pages/GmdProductosPage';
+import GmdCategoryPage from './pages/GmdCategoryPage';
+import GmdProductDetailPage from './pages/GmdProductDetailPage';
+import EquiposMedicosPage from './pages/EquiposMedicosPage';
+import NovamedicaProductDetailPage from './pages/NovamedicaProductDetailPage';
 import PageLoader from './components/PageLoader';
 
 function App() {
@@ -40,6 +45,11 @@ function App() {
             <Route path="/productos" element={<LebrauPage />} />
             <Route path="/contacto" element={<ContactoPage />} />
             <Route path="/otras-marcas" element={<OtrasMarcasPage />} />
+            <Route path="/gmd-productos" element={<GmdProductosPage />} />
+            <Route path="/gmd-productos/categoria/*" element={<GmdCategoryPage />} />
+            <Route path="/gmd-productos/producto/:productId" element={<GmdProductDetailPage />} />
+            <Route path="/equipos-medicos" element={<EquiposMedicosPage />} />
+            <Route path="/equipos-medicos/producto/:productId" element={<NovamedicaProductDetailPage />} />
           </Routes>
         </AnimatePresence>
       </MainLayout>

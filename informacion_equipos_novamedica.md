@@ -1,0 +1,687 @@
+# Catálogo de Equipos 2026 - Novamedica
+
+## Bombas de Infusión
+- SYS-6010
+  - Diseño liviano y compacto
+  - Pantalla táctil de 2.4"
+  - 8 modos de infusión
+  - Compatible con múltiples sets de infusión
+  - Batería Li-on recargable de 5 horas
+  - Puerta motorizada
+  - Opcional: Sensor de goteo, Central de monitoreo
+- MP-60
+  - Diseño liviano y compacto
+  - Pantalla táctil de 2.4"
+  - 9 modos de infusión
+  - Compatible con múltiples sets de infusión
+  - Batería Li-on recargable de 5 horas
+  - Diseño apilable (doble canal mediante acople directo)
+  - Módulo de comunicación WIFI
+  - Puerta motorizada
+  - Compatible con estación de trabajo MP80
+  - Opcional: Central de monitoreo, Sensor de goteo, MP80
+- MP-30
+  - Diseño liviano y compacto
+  - Pantalla táctil de 2.4"
+  - 9 modos de infusión
+  - Compatible con múltiples jeringas de infusión
+  - Batería Li-on recargable de 5 horas
+  - Diseño apilable (doble canal mediante acople directo)
+  - Módulo de comunicación WIFI
+  - Puerta motorizada
+  - Compatible con estación de trabajo MP80
+  - Opcional: Central de monitoreo, Sensor de goteo, MP80
+- HP-60
+  - Diseño liviano y compacto
+  - Pantalla táctil de 3"
+  - 9 modos de infusión
+  - Compatible con múltiples sets de infusión
+  - Batería Li-on recargable de 10 horas
+  - Diseño apilable (doble canal mediante acople directo)
+  - Módulo de comunicación WIFI
+  - Puerta motorizada
+  - Ideal para transfusión de sangre, nutrición parenteral total (TPN) y terapia oncológica
+  - Compatible con estación de trabajo HP80
+  - Opcional: Central de monitoreo, Sensor de goteo, HP80
+
+## Camilla de Transporte
+- SKK-B
+  - Capacidad de carga de 220 kg
+  - Sistema de freno centralizado
+  - Espaldar ajustable a dos (2) posiciones
+  - Sistema de elevación
+  - Atril y soporte integrado para tanque de oxigeno
+  - Levantamiento de espaldar 0-75°
+  - 2 barandas laterales abatibles
+
+## Dopples (Doppler Fetal)
+- SD1
+  - Transductor de 3 MHz para una mejor detección de latidos
+  - App de manejo de visualización
+  - Diseño compacto
+  - Pantalla digital de FHR
+  - Autoapagado para ahorro de energía
+  - Volumen ajustable
+- SD3 PRO
+  - Pantalla OLED brillante para visualización del FHR en tiempo real
+  - Batería recargable con más de 16 horas
+  - Permite la realización de exámenes obstétricos y vasculares
+  - Autoapagado para el ahorro de energía
+  - Graba, reproduce y extrae audio
+  - Transductor de 3 MHz
+  - Opcional: Transductores FHR de 4 MHz, 5 MHz y 8 MHz, Cargador
+- BASIC A (Sonotrax)
+  - Transductor de 2 MHz
+  - Pantalla LCD retroiluminada
+  - Precisión en la medición de la fetocardia
+  - Permite la realización de exámenes obstétricos y vasculares
+  - Indicador de nivel de batería
+  - Opcional: Transductores FHR de 3 MHz, 4 MHz, 5 MHz y 8 MHz
+- II PRO (Sonotrax)
+  - Transductor de 2 MHz
+  - Pantalla LCD retroiluminada
+  - Batería recargable con más de 8 horas
+  - Precisión en la medición de la fetocardia
+  - Permite la realización de exámenes obstétricos y vasculares
+  - Grabación de audio por 240s
+  - Salida para audífonos
+  - Opcional: Transductores FHR de 3 MHz, 4 MHz, 5 MHz y 8 MHz
+
+## Carro de Paro
+- SKK-M
+  - Estructura en ABS, resistente y de fácil limpieza
+  - Cajones amplios con cierre seguro
+  - Ruedas con freno para máxima estabilidad
+  - Portasuero ajustable en altura
+  - Bandeja superior para insumos y equipos
+  - Soporte lateral para contenedor de residuos
+  - Divisiones internas para mejor organización
+  - Portasuero y bandeja superior intercambiables
+
+## Desfibriladores
+- Amoul i2
+  - 4 en 1: Desfibrilación, monitorización, estimulación y DEA
+  - Pantalla a color de 7"
+  - Desfibrilación bifásica con compensación de impedancia
+  - Palas convertibles adulto/pediátrico incluidas
+  - Impresora térmica incorporada
+  - Compacto, liviano con aproximadamente 5,8 kg
+- Amoul i6
+  - 4 en 1: Desfibrilación, monitorización, estimulación y DEA
+  - Monitoreo completo: ECG, SpO2, RESP, NIBP Y TEMP
+  - Desfibrilación bifásica con compensación de impedancia
+  - Palas convertibles adulto/pediátrico incluidas
+  - Pantalla LCD TFT a color de 7" de alta resolución
+  - Impresora térmica incorporada
+  - Opcional: Sensor CPR, Medición de CO2
+- Amoul i7 Plus (DEA)
+  - Análisis automático del ritmo cardíaco
+  - Energía configurable: 100-360 J (adulto)/10-100J (pediátrico)
+  - Guía por voz paso a paso durante todo el proceso
+  - Tiempo de carga rápido: <8 s (200 J) / <15 s (360 J)
+  - Batería de litio de 4500 mAh con vida útil de hasta 7 años en espera
+  - Registro de eventos y almacenamiento de datos clínicos
+  - Autoverificación automática (diaria, semanal y mensual)
+  - Incluye pads (electrodos) multifuncionales adulto/pediátrico
+  - Opcional: Maletín de transporte, Gabinete DEA
+
+## Ecógrafos (Sistema de Diagnóstico Ultrasonido)
+- Acclarix AX2
+  - Pantalla LCD principal de 15.6"
+  - Pantalla táctil de 10.1"
+  - Diseño portátil, flexible y ligero (Peso: 4.5 kg)
+  - Baterías duales que permiten un tiempo de trabajo de 3 horas
+  - Sistema silencioso con inicio rápido y arranque de 30 segundos
+  - eOptimized
+  - Seguimiento automático de PW
+  - Almacenamiento de alta capacidad con transferencia USB
+  - eTouch: control de gestos de "deslizar" eficiente
+  - Diseño de interfaz de usuario innovador con división precisa de funciones
+  - Elastografía
+- Acclarix AX3
+  - Pantalla LCD principal de 15.6"
+  - Pantalla táctil de 10.1"
+  - Dos puertos activos de transductor
+  - Diseño portátil, flexible y ligero (Peso: 4.5 kg)
+  - Baterías duales que permiten un tiempo de trabajo de 3 horas
+  - Sistema silencioso con inicio rápido y arranque de 30 segundos
+  - eOptimized
+  - Seguimiento automático de PW
+  - Almacenamiento de alta capacidad con transferencia USB
+  - eTouch: control de gestos
+  - 3D/4D (Con transductor volumétrico)
+  - Elastografía
+- Acclarix AX8
+  - Tecnología de procesamiento de imagen de última generación
+  - Monitor principal LED de 15.6"
+  - Pantalla secundaria táctil de 12.3"
+  - Panel de control hermético a prueba de derrames
+  - Función Stress Echo
+  - Disco duro SSD de 1 TB
+  - Módulo ECG
+  - WiFi integrado
+  - Compatible con transductor transesofágico
+- Acclarix LX3
+  - Monitor LCD de 21.5" de alta resolución con ángulo de visión multidimensional
+  - Pantalla táctil de alta sensibilidad de 14" que permite un funcionamiento eficaz
+  - Calentador de gel
+  - Configuración de 5 puertos para transductores
+  - Diseño de ajuste de altura ergonómico
+  - eOptimized, PW auto trace
+  - eTouch - eficiente control gestual "Swipe"
+  - eLearn - software tutorial de fácil uso
+  - 3D/4D (Transductor volumétrico)
+  - Conectividad DICOM 3.0
+- Acclarix LX9
+  - Monitor grado médico LCD de 21.5" con alta resolución
+  - Pantalla táctil de alta sensibilidad inclinable de 14"
+  - 5 puertos activos para transductores
+  - Panel de control rotatorio y ajustable en altura
+  - Calentador de gel
+  - Disco duro SSD de 1 TB
+  - Función Stress Echo y ECG
+  - Teclado físico retráctil retroiluminado
+  - 3D/4D (Transductor volumétrico)
+
+## Electrocardiógrafos
+- SE-3
+  - Compacto, portátil y liviano
+  - Pantalla a color de 3.5"
+  - Plegable hasta 90°
+  - Visualización de las 12 derivadas
+  - 3 canales de impresión simultánea
+  - Batería recargable de 6.5 horas de uso continuo
+  - Modo de trabajo auto/manual
+  - Software interpretativo SEMIP
+  - Exportación de estudios de ECG en formatos PDF
+  - Permite la conexión a través del software de datos SE-1515 (Opcional)
+- SE-301
+  - Diseño ultra compacto, portátil y liviano (<1 Kg)
+  - Pantalla LCD táctil de 5"
+  - WiFi incorporado para una transmisión de datos más eficaz
+  - Impresora térmica incorporada de alta resolución
+  - Visualización de las 12 derivadas
+  - 3 canales de impresión simultánea
+  - Batería recargable de 8.5 horas de uso continuo
+  - Detección y alerta de desconexión
+  - Permite la conexión a través del software de datos SE-1515 (Opcional)
+- SE-601C
+  - Diseño compacto, portátil y liviano
+  - Pantalla LCD táctil a color de 5.6"
+  - Visualización de las 12 derivadas
+  - 6 canales de impresión simultánea
+  - Detección de marcapasos
+  - Impresora térmica incorporada de alta resolución
+  - Batería recargable de 5 horas de uso continuo
+  - Software interpretativo SEMIP
+  - Almacena hasta 800 datos de paciente
+  - Permite la conexión a través de software de datos SE-1515 (Opcional)
+- SE-1200 Express
+  - Pantalla LCD táctil de 8"
+  - 12 canales de visualización e impresión simultánea
+  - Detección de marcapasos
+  - Batería recargable de 8 horas de uso continuo
+  - Alarma visual de desconexión de electrodos
+  - Software interpretativo Semip
+  - Teclado alfanumérico
+  - Permite la conexión a través del software de datos SE-1515 (Opcional)
+- SE-1201 PRO
+  - Pantalla táctil LCD de 10,1" con resolución 1920 x 1200 px
+  - Almacenamiento interno > 100.000 estudios
+  - Admite múltiples formatos: PDF, JPG, BMP, PNG, TIFF
+  - Batería recargable de ion-litio con autonomía aproximada de 3 a 4 horas de uso continuo
+  - Imprime 12 canales y muestra simultáneamente las 12 derivaciones en pantalla en tiempo real con alta precisión
+  - Conectividad WiFi, Bluetooth
+  - Compatibilidad con software de manejo de datos SE-1515 (Opcional)
+
+## Electrobisturí
+- DT-400S
+  - Potencia de hasta 400 W
+  - Tres entradas para lápiz: 2 monopolares y una bipolar
+  - Tres alarmas sonoras diferenciadas según el modo de operación
+  - Memoria de usuario (0 a 9) para guardar configuraciones personalizadas
+  - Múltiples modos avanzados de corte y coagulación: 4 modos de corte monopolar, 3 modos de coagulación monopolar, 1 o 2 modos de corte/coagulación bipolar
+  - Sistema de seguridad ANPM / D.R.M. con monitoreo automático de la placa del paciente
+  - Tres displays independientes para control de corte y coagulación
+- DT-200S
+  - Máxima potencia de salida para corte monopolar 200 W
+  - Dos entradas para lápiz: una monopolar y una bipolar
+  - Tres alarmas sonoras diferenciadas según el modo de operación
+  - 2 modos de corte/coagulación monopolar, 1 modo de corte/coagulación bipolar
+  - Memoria de usuario (hasta 9 configuraciones)
+  - Diseño compacto e interfaz intuitiva
+  - Sistema de seguridad ANPM/D.R.M. con monitoreo automático de la placa del paciente
+
+## Holters y Prueba de Esfuerzo
+- Prueba de Esfuerzo SE-1515
+  - Transmisión inalámbrica (Bluetooth)
+  - Trabaja en PC y Tablet
+  - Generación automática de informes y vistas previas
+  - Compatible con Trotadora TMX-428
+  - Análisis automático de arritmias
+  - 12 derivadas adquiridas y visualizadas
+  - Informes en formatos XML, PDF, DOC o JPG transferidos por correo electrónico
+- Trotadora TMx-428
+  - Capacidad máxima de soporte de 227 kg
+  - Conectividad con prueba de esfuerzo SE-1515
+  - Rango de elevación de 0° a 25°
+  - Parada de emergencia
+  - Rango de velocidad de 0,2 a 24 km/h
+- Sistema Holter SE-2003
+  - Incluye software
+  - 3 canales de grabación digital
+  - Pantalla a color con visualización de forma de onda
+  - Diseño ligero, impermeable y compacto (50 g)
+  - Resistencia IP27 a prueba de agua y polvo
+  - Detección de marcapasos
+  - Frecuencias de muestreo ajustables
+- Monitos de Presión Arterial Ambulatorio (MAPA) SA-10
+  - Pantalla a color para la monitorización de presión sanguínea de 24 horas
+  - Incluye software que permite almacenamiento, análisis de datos y generación de informes
+  - Transmisión inalámbrica
+  - Diseño ligero <170 g
+  - Memoria interna para almacenar hasta 600 NIBP
+  - Resistencia IP22 a prueba de agua y polvo
+  - Amplio rango de medición de presión arterial desde 10 mmHg hasta 290 mmHg
+
+## Incubadoras y Lámparas de Calor Radiante
+- YP-3000
+  - Sistema multifuncional que combina incubadora y calentador radiante
+  - Pantalla táctil de 8"
+  - MODO CALENTADOR: Tres modos de control: pre-calentamiento, manual y modo bebé. Rango de temperatura: 32°C-37°C.
+  - MODO INCUBADORA: Dos modos: transporte y modo bebé. Rango temperatura aire: 25°C-37°C. Rango temperatura bebé: 34°C-37°C.
+  - Control de rango de humedad: 0% HR-90% HR
+  - Sistema de control de la concentración de oxígeno
+  - Sistema de ajuste de altura vertical
+  - Inclinación de cuna ±12°
+  - Portachasis para toma de RX
+  - Opcionales: Lámpara de observación
+- YP-920
+  - Modo de control: modo aire y bebé controlado por microprocesador
+  - Sistema doble cabina para mejor circulación de aire
+  - Control de rango de humedad: 0% HR-90% HR
+  - Sistema de Trendelenburg ajustable
+  - Rango de control de temperatura del aire: 20°C-37°C, del bebé: 34°C-37°C
+  - Precisión del sensor de temperatura de piel ±0,2°C
+  - Inclinación de la cuna: ±10°
+  - Alarmas audibles y visuales
+  - Opcional: Inclinación ±12°, Balanza pesa bebé
+- YP-800
+  - Pantalla táctil LCD a color de 10"
+  - Campana de doble pared y cortina
+  - Inclinación ajustable de la cuna
+  - Dos modos de control: modo aire y modo bebé
+  - Sistema de monitoreo de doble sensor de temperatura de la piel
+  - Sistema de báscula (opcional)
+  - Diseño de doble seguro de la puerta principal
+  - Sistema de protección independiente contra sobre-temperatura
+  - Puerto RS232: Transmisión de datos
+  - Alarmas audibles y visibles
+  - Sistema electrónico de ajuste de altura
+  - Sistema de control de humedad
+  - Opcional: SpO2, sistema de control de O2
+- TI-2000
+  - Sistema doble cabina para mejor circulación de aire
+  - Dos modos de control de temperatura: aire y bebé
+  - Humidificación pasiva
+  - Rango de control aire: 25°C-37°C, bebé: 34°C-37°C
+  - Alarmas visuales y audibles
+  - Batería para 90 minutos de uso continuo
+  - Permite corriente (AC/DC) para uso de ambulancias
+  - Cuenta con soportes, cilindros vacíos y atril
+  - Opcional: Batería adicional para 180 min, control de humedad, carrito de ambulancia
+- TI-2100B
+  - Pantalla táctil TFT LCD de 8.8 pulgadas
+  - Campana con doble pared termoaislante
+  - Batería de litio de alta capacidad (hasta 6 horas ininterrumpidas)
+  - Lámpara superior de observación incorporada
+  - Colchón viscoelástico o con dispersión de presión
+  - Triple protección independiente contra sobretemperatura
+  - Monitorización de control de oxígeno, saturación, hemoglobina (opcional)
+  - Sistema de control de humedad
+- HKN-93C (Lámpara de calor radiante)
+  - Pantalla táctil de 10.4"
+  - Tres modos de control: pre-calentamiento, manual y modo bebé
+  - Rango de control de temperatura del bebé: 34.5°C-37°C
+  - Lámpara de fototerapia
+  - Medición de parámetro de SpO2
+  - Unidad de succión (Venturi)
+  - Unidad de reanimación infantil
+  - Sistema de ajuste de altura vertical
+  - Inclinación de cuna ±12°
+  - Portachasis para toma de RX
+  - Opcionales: Balanza, humidificador, SpO2 Masimo, Lámpara de observación
+- HKN-9010
+  - Tres modos de control: pre-calentamiento, manual y modo bebé
+  - Rango de control de la temperatura del bebé: 34°C-38°C
+  - Controlada por micro-procesador
+  - Inclinación de cuna ±10°
+  - Portachasis para toma de RX
+  - Dos gabinetes para almacenamiento
+- HKN-93B
+  - Tres modos de control: pre-calentamiento, manual y modo bebe
+  - Rango de control de la temperatura del bebé: 34°C-38°C
+  - Lámpara de fototerapia
+  - Controladas por micro-ordenador
+  - Portachasis para toma de RX
+  - Inclinación de cuna ±12°
+  - Dos gabinetes para almacenamiento
+  - Opcional: Sistema de ajuste de altura, Sistema de Pesaje
+
+## Iluminador de Venas
+- NAVI-60
+  - Colores de proyección ajustables
+  - Recargable (2.5 horas de uso continuo)
+  - Imagen de las venas en tiempo real sin contacto
+  - Detección de profundidad de la vena
+  - Diseño compacto y liviano: operación con una sola mano
+  - Alta definición de imagen y contraste venoso
+  - Compatible con todos los tonos de piel
+  - Incluye soporte para transporte
+
+## Lámparas de Fototerapia
+- XHZ-90P
+  - Fuente de luz: LED azul mezclada con amarilla para suavizar la irradiación
+  - Ajuste de nivel de intensidad de radiación (Alto y bajo)
+  - Ajuste de altura del módulo: 1350mm-1680mm
+  - Vida útil de la fuente de luz: 20.000 horas
+  - Longitud de onda luz azul: 420nm-470nm, amarilla: 580nm-595nm
+  - Cuenta con temporizador para tratamiento
+- XHZ-90L
+  - Fuente de luz: LED azul
+  - Ajuste de altura del módulo: 1350mm-1650mm
+  - Vida útil de la fuente de luz: 5.000 horas
+  - Longitud de onda de la luz azul 420nm-470nm
+  - Cuenta con temporizador para tratamiento
+- XHZ-90
+  - Iluminación halógena
+  - Temporizador incorporado (cronómetro)
+  - Cabezal y altura ajustables
+  - Diseño compacto y móvil
+  - Funcionamiento con bajo nivel de ruido
+  - Compatibilidad con incubadoras
+  - Emisión de luz azul concentrada en 436 nm ±5 nm
+
+## Lámparas de Cirugía
+- LS800-750
+  - Vida útil del panel de iluminación de 50.000 horas
+  - Luminancia de 120.000 Lux en el primer satélite y 160.000 Lux en el segundo satélite
+  - Temperatura del color 4300 K
+  - Control digital de intensidad en cada satélite
+  - Sistema de compensación de luz inteligente
+  - Rotación 360°
+  - Luz LED o fría para proteger tejidos del paciente
+  - Opcionales: Cámara de Video (incorporada), Pantalla grado médico
+- LS800-550
+  - Vida útil del panel de iluminación de 50.000 horas
+  - Luminancia de 120.000 Lux por satélite
+  - Temperatura del color 4300 K
+  - Control digital de intensidad en cada satélite
+  - Sistema de compensación de luz inteligente
+  - Rotación 360°
+  - Luz LED o fría para proteger tejidos del paciente
+- OLM-9550 (Lámpara Pielítica)
+  - Fuente de poder y respaldo de batería
+  - Luminancia ajustable de 40.000 a 160.000 lux
+  - Vida útil de los LED: ≥ 70.000 horas
+  - Cubiertas superiores en aleación de aluminio para mejor disipación térmica
+  - Sistema de transporte con ruedas y frenos de bloqueo
+  - Mango desmontable y esterilizable en autoclave
+  - Índice de reproducción cromática Ra ≈ 98
+
+## Máquinas de Anestesia
+- BOARAY 700
+  - Pantalla giratoria táctil a color de 15"
+  - Tipos de paciente: adulto y pediátrico
+  - Modos de ventilación: Manual/Standby, VCV, PCV, PRVC, CPAP/PSV, SIMV + VCV, SIMV + PCV, SIMV + PRVC
+  - PEEP electrónica, Monitoreo FiO2
+  - Sistema de calefacción integrado fabricado en PPSU
+  - Tipo de gas: Aire, O2 y N2O
+  - Batería para 60 minutos de uso continuo
+  - Soporte para 2 Vaporizadores montaje tipo Selectatec
+  - Opcional: Módulo de Multigas, Módulo SpO2, Módulo SideStream de Co2
+- BOARAY 600D
+  - Pantalla a color 8.4"
+  - Tipos de paciente: adulto y pediátrico
+  - Modos de ventilación: Manual/Standby, (VCV), (PCV), SIMV(V)+PS, SIMV(P)+PS, PRVC, PSV
+  - PEEP electrónica, Monitoreo FiO2
+  - Sistema de calefacción integrado fabricado en PPSU
+  - Tipo de gas: Aire, O2 y N2O
+  - Batería para 60 minutos de uso continuo
+  - Soporta medición de CO2
+  - Soporte para 2 Vaporizadores montaje tipo Selectatec
+  - Opcional: Módulo SideStream de CO2, Vaporizadores
+- PUMILA 750D
+  - Pantalla táctil a color de 15"
+  - Tipos de paciente: adulto y pediátrico
+  - Volumen Corriente mínimo de 10ml
+  - PEEP electrónica, Monitoreo FiO2
+  - Sistema de calefacción integrado fabricado en PPSU
+  - Tipo de gas: Aire, O2 y N2O
+  - Batería para 90 minutos de uso continuo
+  - Soporte para 2 Vaporizadores montaje tipo Selectatec
+  - Mesa de trabajo plegable
+  - Modos de ventilación: Manual/Standby, VCV, PCV, PRVC, CPAP/PSV, SIMV + VCV, SIMV + PCV, SIMV + PRVC
+  - Opcional: Módulo de Multigas, Vaporizadores
+
+## Mesas de Cirugía
+- DR. MAX 7000SKB
+  - Sistema Electrohidráulico integrado
+  - Fabricada en acero inoxidable
+  - Alta capacidad de carga hasta 360 Kg
+  - Uso general o cirugías específicas (rodilla, hombro, ortopédicas, abdominales, etc.)
+  - Hasta 100 accionamientos con Batería interna
+  - Proporciona movimiento longitudinal para la toma de RX con arco en C
+  - Movimiento posición cero con un solo accionamiento
+  - Opcional: Accesorios ortopedia, parto/urología, neurocirugía, soporte de cuerpo, accionamiento manual
+- NOT-5600SKF
+  - Sistema Electrohidráulico integrado - Fabricación en acero inoxidable
+  - Capacidad de peso máxima de 273Kg - Radio-traslúcida para toma de RX
+  - Proporciona movimiento longitudinal - Es compatible con accesorios de ortopedia
+  - Rango de altura de 760 mm-1070 mm
+  - Uso general o cirugías específicas
+  - Movimiento de riñonera o puente riñón
+  - Batería interna integrada
+  - Opcional: Accesorio ortopedia, Accesorio parto/urología
+
+## Monitores Fetales
+- F6 Express
+  - Pantalla TFT plegable de 10.1"
+  - Monitoreo de parámetros maternos (ECG, SPO2, TEMP, NIBP)
+  - Batería recargable de 2 horas de trabajo continuo
+  - Detección gemelar, Detección de movimiento fetal automático
+  - Verificación de superposición de señales
+  - Transductores FHR impermeables de alta sensibilidad
+  - Vista previa de tendencias, Múltiples modos de pantalla
+  - Opcional: Monitorización invasiva DECG e IUP, Central de monitoreo
+- F3
+  - Pantalla TFT a color de 5.6"
+  - Transductor FHR de 8 cristales (a prueba de agua)
+  - Interface USB para la transmisión de datos
+  - Detección de movimiento fetal automático
+  - Modos de visualización en pantalla: Ondas numéricas y mixtas
+  - Detección gemelar incorporada
+  - Opcional: Monitorización invasiva DECG e IUP, Central de monitoreo, Análisis CTG
+- F9 Express
+  - Pantalla táctil de 12.1" de alta resolución, 60° grados de inclinación
+  - Transductores impermeables de 12 cristales
+  - Parámetros fetales: FHR Gemelar, TOCO, Análisis CTG, MFM, AFM
+  - Parámetros maternos: NIBP, SpO2, HR, ECG, Temp
+  - Opcional: DECG, IUP
+- F15 Air
+  - Pantalla LCD táctil de 15.6" con interfaz intuitiva
+  - Transductores inalámbricos ligeros (<10g), impermeables de 12 cristales
+  - Sistema de análisis CTG profesional
+  - Monitoreo continuo
+  - Lectura de frecuencia cardíaca de la madre
+  - Memoria de respaldo de los transductores de 15 min
+  - Rango de los transductores de 50 metros (aproximadamente)
+  - Monitorización de gemelos y trillizos (Opcional)
+  - Carga inalámbrica de los transductores
+  - Opcional: DECG-IUP, Medición materna inalámbrica
+
+## Monitores de Paciente
+- Monitor X8
+  - Diseño ligero, delgado y compacto
+  - Pantalla TFT táctil a color de 8"
+  - 13 formas de ondas máximo
+  - Batería de litio recargable de 4 horas
+  - 5 parámetros (ECG, SpO2, NIBP, RESP, 1-TEMP)
+  - Visualización de múltiples ondas en pantalla
+  - Detección de marcapasos
+  - Opcional: CO2, Central de monitoreo
+- Monitor X12
+  - Diseño ligero, delgado y compacto
+  - Pantalla TFT a color de 12.1"
+  - Batería recargable de 4 horas
+  - Diseño Slim (delgado)
+  - 5 parámetros básicos de paciente (ECG, SpO2, NIBP, RESP, 2-TEMP)
+  - 13 Formas de ondas máximo
+  - Comunicación bidireccional con la Central de monitoreo (Opcional)
+  - Detección de Marcapasos
+  - Opcional: IBP, Central de monitoreo
+- Monitor iM50
+  - Pantalla táctil a color de 8.4"
+  - Batería recargable de 4,5 horas, ideal para transporte
+  - 5 parámetros de paciente (ECG, SpO2, NIBP, RESP, 2-TEMP)
+  - Visualización de múltiples ondas en pantalla
+  - Análisis de arritmias
+  - Conexión a la central de monitoreo
+  - Detección de marcapasos
+  - Opcional: CO2-Central de monitoreo, Llamada de enfermería
+- Monitor iM3s
+  - Pantalla táctil full color de 5"
+  - Compatible con baterías recargables y AA desechables
+  - Almacenamiento interno para ≥20.000 registros de paciente
+  - Diseño compacto, ligero y portátil
+  - Apto para paciente adulto, pediátrico y neonatal
+  - Alarmas audibles y visibles
+  - Opcional: Temperatura, Central de monitoreo WiFi, Impresora Térmica
+- Monitor iM70
+  - Pantalla táctil a color de 12.1"
+  - Batería de litio recargable de 3.5 horas
+  - 5 parámetros de paciente (ECG, SpO2, NIBP, RESP, 2 TEMP)
+  - Visualización de múltiples ondas en pantalla
+  - Detección de marcapasos, Análisis de segmentos
+  - Conexión a central de monitoreo
+  - Opcional: 2IBP + CO, CO2, Multigas, Central de monitoreo
+- Monitor Elite V5
+  - Pantalla TFT-LCD a color de 12.1"
+  - 2 Baterías de litio recargable para hasta 10 horas de operación
+  - Visualización de hasta 13 formas de ondas
+  - Parámetros: ECG 3/5 derivaciones, RESP, SPO2, NIBP, 2 TEMP, PR, 2 IBP (opcional)
+  - Diseño amigable sin ventilador
+  - Conexión a central de monitoreo
+  - Módulos Opcionales: IBP, CO, CO2, AG/O2, BIS, EEG, RM, ICG, NMT, V LINK
+- Monitor iM20
+  - Pantalla TFT-LCD a color de 5"
+  - Equipo liviano para transporte (1.5 kg)
+  - Compatible como módulo de parámetros básicos del monitor ELITE V5
+  - Batería de litio recargable para hasta 5.5 horas de operación
+  - Diseño robusto con IP44 a prueba de agua y polvo
+  - Parámetros: ECG 3/5 derivaciones, RESP, SPO2, NIBP, 2 TEMP, PR
+
+## Oxímetro
+- H100B
+  - Pantalla LCD retroiluminada
+  - Pulso oxímetro para paciente adulto, pediátrico y neonatal
+  - IP22 Resistente al agua y polvo
+  - Visualización onda pletismográfica de SpO2
+  - Batería AA de hasta 48 horas de uso
+  - Almacenamiento de datos de 300 horas
+  - Opcional: Base cargador, Sensor SpO2 neonatal/pediátrico, Medición de temperatura (H100N), Tecnología Nellcor OximaxTM (H100N)
+
+## Succionadores
+- YX-980D
+  - Capacidad de 12L dividido en 4 frascos (2 de 2L y 2 de 4L)
+  - Alta velocidad de flujo regulable 80L/min
+  - Succionador de fácil movilidad
+  - Máximo vacío de 680 mm Hg
+  - Bomba de libre mantenimiento
+  - Sistema de cierre hermético, Frascos de policarbonato
+- YX-930D
+  - Capacidad de 5L divididos en 2 frascos de 2.5L
+  - Alta velocidad de flujo regulable de 40L/min
+  - Succionador de fácil movilidad
+  - Máximo vacío de 680 mm Hg
+  - Bomba de libre mantenimiento
+  - Frascos: material de policarbonato
+  - Sistema de cierre hermético
+- SXT-5A
+  - Capacidad de 1 litro
+  - Material plástico transparente
+  - Alto vacío, alto flujo, buen rendimiento
+  - Liviano ideal para transporte
+  - Posee protección de sobre flujo
+  - Máximo vacío de 600mmHg
+  - Alta velocidad de flujo regulable de 22 L/M
+  - Bomba de libre de mantenimiento
+  - Opcional: Frasco adicional de 1 litro para capacidad de 2 litros
+
+## Ventiladores
+- Amoul T6
+  - Ventilador de transporte
+  - Apto para 3 tipos de paciente (Adulto, pediátrico y neonatal)
+  - Pantalla Táctil a color
+  - Turbina potente y silenciosa
+  - Volumen corriente mínimo de 2 ml
+  - Ventilación Invasiva y no Invasiva con múltiples modos
+  - Transporte prehospitalario e intrahospitalario
+  - Peso con batería incluida (6,2kg)
+  - Alarmas audibles y visibles
+  - Opcional: Carro de transporte
+- PADUS 8
+  - Pantalla táctil de 17"
+  - Tipo de paciente: adultos, pediátricos y neonatales
+  - Software intuitivo de fácil manejo
+  - Parámetros programables y monitoreables
+  - Medición y ajuste de FiO2
+  - Alarmas automáticas y programables
+  - Módulo de mecánica ventilatoria
+  - Batería interna con 90 min. de autonomía
+  - Visualización de alarmas 360°
+  - Múltiples Modos de ventilación invasiva y no invasiva
+  - Opcionales: Presión esofágica, Capnografía, Oximetría, Módulo neonatal, 2da Batería
+- PADUS 5
+  - Fuente de gas: O2 y turbina (Aire ambiente)
+  - Pantalla táctil de 12"
+  - Tipo de pacientes: Adulto/Pediátrico/Neonatal
+  - Batería: 120 minutos de autonomía
+  - Medición y ajuste de FiO2
+  - Visualización de alarmas 360°
+  - Varios escenarios de aplicación
+  - Software intuitivo de fácil manejo
+  - Humidificador
+  - Múltiples Modos de ventilación invasiva y no invasiva
+  - Opcionales: Capnografía, Medición de SpO2, 2da batería
+
+## Videolaringoscopios
+- VL-3D
+  - Cámara Full HD de 2.0 MP (1920x1080)
+  - Pantalla LCD de 3,5" con rotación vertical 0-140° y horizontal 0-180°
+  - Memoria interna de 32 GB (registro de fotos y video)
+  - Valvas desechables estériles
+  - Salida HDMI para visualización en monitor externo
+  - Incluye valvas curvas tipo Macintosh desechables (#2, #3 y #4)
+  - Opcional: Valvas Macintosh/curvas (#1, #5)
+- VL-3R
+  - Cámara Full HD de 2.0 MP (1920x1080)
+  - Pantalla LCD de 3,5" con rotación vertical 0-140° y horizontal 0-180°
+  - Memoria interna de 32 GB (registro de fotos y video)
+  - Valvas reutilizables impermeables (IPX8)
+  - Salida HDMI para visualización en monitor externo
+  - Incluye valvas curvas tipo Macintosh reutilizables (#2, #3 y #4)
+  - Valvas Miller/rectas (#00, #0, #1)
+  - Opcional: Valvas Macintosh/curvas (#1, #5)
+
+## Videocolposcopio
+- C6A
+  - Software de visualización de imágenes y gestión de datos
+  - Intensidad luminosa de 2.500 lúmenes
+  - Control remoto de ruptura
+  - El sistema de evaluación R-way estandariza la interpretación de los hallazgos colposcópicos
+  - Sistema de iluminación LED que garantiza una visión real del tejido
+  - Visualización de imágenes y cámara de alta resolución
+  - Sistema de enfoque automático
+  - Filtro electrónico verde para una mejor visualización de la imagen vascular
+  - Duplica imagen en tiempo real

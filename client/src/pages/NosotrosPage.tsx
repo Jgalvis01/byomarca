@@ -4,7 +4,7 @@ const NosotrosPage = () => {
   return (
     <div className="min-h-screen bg-black pt-24 pb-16 px-4 sm:px-6 lg:px-8 relative">
       {/* Logo on Top Left */}
-      <div className="absolute top-8 left-8">
+      <div className="absolute top-24 left-8">
         <img
           src="/images/LOGO BYOMARCA1 (1).png"
           alt="BYOMARCA"
@@ -77,12 +77,31 @@ const NosotrosPage = () => {
         </motion.div>
       </div>
 
-      {/* Innovación Constante y Diseño Ergonómico */}
+      {/* Equipos Médicos e Innovación Constante */}
       <div className="max-w-5xl mx-auto mt-16 grid md:grid-cols-2 gap-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.5 }}
+          className="glass-card rounded-2xl p-8 smooth-transition blue-glow group"
+        >
+          <div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-blue-500/20 to-blue-600/20 flex items-center justify-center mb-6 group-hover:scale-110 smooth-transition">
+            <svg className="w-12 h-12 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" />
+            </svg>
+          </div>
+          <h3 className="text-xl font-semibold text-white mb-4 group-hover:text-blue-400 smooth-transition">
+            Equipos Médicos Especializados
+          </h3>
+          <p className="text-gray-300 text-lg leading-relaxed">
+            Amplio portafolio de equipos médicos de alta tecnología para diagnóstico, monitoreo y tratamiento en instituciones de salud.
+          </p>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.6 }}
           className="glass-card rounded-2xl p-8 smooth-transition blue-glow group"
         >
           <div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-blue-500/20 to-blue-600/20 flex items-center justify-center mb-6 group-hover:scale-110 smooth-transition">
@@ -95,25 +114,6 @@ const NosotrosPage = () => {
           </h3>
           <p className="text-gray-300 text-lg leading-relaxed">
             Investigación y desarrollo continuo para ofrecer soluciones de mobiliario clínico de vanguardia.
-          </p>
-        </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.6 }}
-          className="glass-card rounded-2xl p-8 smooth-transition blue-glow group"
-        >
-          <div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-blue-500/20 to-blue-600/20 flex items-center justify-center mb-6 group-hover:scale-110 smooth-transition">
-            <svg className="w-12 h-12 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M20 14.66V20a2 2 0 01-2 2H4a2 2 0 01-2-2V6a2 2 0 012-2h2.34M20 14.66l-2.34 2.34A2 2 0 0017 18.34V20m3-5.34V6a2 2 0 00-2-2h-1.66M17 18.34V16a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m-6 0h12" />
-            </svg>
-          </div>
-          <h3 className="text-xl font-semibold text-white mb-4 group-hover:text-blue-400 smooth-transition">
-            Diseño Ergonómico
-          </h3>
-          <p className="text-gray-300 text-lg leading-relaxed">
-            Productos diseñados pensando en el confort del paciente y la facilidad de uso para el personal médico.
           </p>
         </motion.div>
       </div>

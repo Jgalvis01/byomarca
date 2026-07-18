@@ -5,10 +5,14 @@ const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isProductsOpen, setIsProductsOpen] = useState(false);
+  const [isOtherBrandsOpen, setIsOtherBrandsOpen] = useState(false);
   const [isMobileProductsOpen, setIsMobileProductsOpen] = useState(false);
+  const [isMobileOtherBrandsOpen, setIsMobileOtherBrandsOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
   const navigate = useNavigate();
   const location = useLocation();
+
+  const isHomePage = location.pathname === '/';
 
   useEffect(() => {
     const handleScroll = () => {
@@ -24,6 +28,7 @@ const Navbar = () => {
     const handleClickOutside = (event: MouseEvent) => {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
         setIsProductsOpen(false);
+        setIsOtherBrandsOpen(false);
       }
     };
     document.addEventListener('mousedown', handleClickOutside);
@@ -39,14 +44,19 @@ const Navbar = () => {
     navigate('/nosotros');
   };
 
+  const handleInicio = () => {
+    scrollToTop();
+    navigate('/');
+  };
+
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        location.pathname === '/' && !isScrolled
-          ? 'opacity-0 -translate-y-full pointer-events-none'
-          : 'opacity-100 translate-y-0'
+        !isHomePage || isScrolled
+          ? 'opacity-100 translate-y-0'
+          : 'opacity-0 -translate-y-full pointer-events-none'
       } ${
-        isScrolled
+        !isHomePage || isScrolled
           ? 'bg-black/80 backdrop-blur-lg border-b border-blue-500/20'
           : 'bg-transparent'
       }`}
@@ -55,6 +65,14 @@ const Navbar = () => {
         <div className="flex items-center justify-center h-20">
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center justify-center space-x-8 w-full">
+            {/* INICIO */}
+            <button
+              onClick={handleInicio}
+              className="transition-colors duration-200 text-base font-semibold tracking-wide text-gray-200 hover:text-blue-400"
+            >
+              INICIO
+            </button>
+
             {/* NOSOTROS */}
             <button
               onClick={handleNosotros}
@@ -67,7 +85,6 @@ const Navbar = () => {
             <div className="relative" ref={dropdownRef}>
               <button
                 onClick={() => setIsProductsOpen(!isProductsOpen)}
-                onMouseEnter={() => setIsProductsOpen(true)}
                 className="flex items-center space-x-1 transition-colors duration-200 text-base font-semibold tracking-wide text-gray-200 hover:text-blue-400"
               >
                 <span>PRODUCTOS</span>
@@ -83,37 +100,58 @@ const Navbar = () => {
 
               {/* Dropdown Menu */}
               {isProductsOpen && (
-                <div
-                  className="absolute top-full left-0 mt-2 w-52 bg-black/95 backdrop-blur-lg border border-blue-500/20 rounded-xl overflow-hidden shadow-xl shadow-blue-500/10"
-                  onMouseLeave={() => setIsProductsOpen(false)}
-                >
+                <div className="absolute top-full left-0 mt-2 w-64 bg-black/95 backdrop-blur-lg border border-blue-500/20 rounded-xl overflow-visible shadow-xl shadow-blue-500/10">
                   <Link
-                    to="/lebrau"
+                    to="/equipos-medicos"
                     onClick={() => {
                       setIsProductsOpen(false);
-                      scrollToTop();
-                    }}
-                    className="flex items-center space-x-3 px-5 py-4 text-gray-200 hover:text-blue-400 hover:bg-blue-500/10 transition-all duration-200 text-sm font-semibold tracking-wide"
-                  >
-                    <img
-                      src="/images/logolebraunew.png"
-                      alt="LEBRAU"
-                      className="h-5 w-auto"
-                      style={{ filter: 'brightness(1.2)' }}
-                    />
-                    <span>MARCA LEBRAU</span>
-                  </Link>
-                  <div className="h-px bg-blue-500/10" />
-                  <Link
-                    to="/otras-marcas"
-                    onClick={() => {
-                      setIsProductsOpen(false);
+                      setIsOtherBrandsOpen(false);
                       scrollToTop();
                     }}
                     className="block px-5 py-4 text-gray-200 hover:text-blue-400 hover:bg-blue-500/10 transition-all duration-200 text-sm font-semibold tracking-wide"
                   >
-                    OTRAS MARCAS
+                    <span>EQUIPOS MÉDICOS</span>
                   </Link>
+                  <div className="h-px bg-blue-500/10" />
+                  <Link
+                    to="/lebrau"
+                    onClick={() => {
+                      setIsProductsOpen(false);
+                      setIsOtherBrandsOpen(false);
+                      scrollToTop();
+                    }}
+                    className="block px-5 py-4 text-gray-200 hover:text-blue-400 hover:bg-blue-500/10 transition-all duration-200 text-sm font-semibold tracking-wide"
+                  >
+                    <span>LEBRAU</span>
+                  </Link>
+                  <div className="h-px bg-blue-500/10" />
+                  <div className="relative">
+                    <button
+                      type="button"
+                      onClick={() => setIsOtherBrandsOpen(!isOtherBrandsOpen)}
+                      className="flex items-center justify-between w-full px-5 py-4 text-gray-200 hover:text-blue-400 hover:bg-blue-500/10 transition-all duration-200 text-sm font-semibold tracking-wide"
+                    >
+                      <span>OTRAS MARCAS</span>
+                      <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      </svg>
+                    </button>
+                    {isOtherBrandsOpen && (
+                      <div className="absolute top-0 left-full ml-2 w-60 bg-slate-950/98 backdrop-blur-lg border border-blue-400/25 rounded-xl overflow-hidden shadow-xl shadow-blue-500/10 z-20">
+                        <Link
+                          to="/gmd-productos"
+                          onClick={() => {
+                            setIsProductsOpen(false);
+                            setIsOtherBrandsOpen(false);
+                            scrollToTop();
+                          }}
+                          className="block px-5 py-4 text-gray-200 hover:text-blue-300 hover:bg-blue-500/10 transition-all duration-200 text-sm font-semibold tracking-wide"
+                        >
+                          GMD PRODUCTOS
+                        </Link>
+                      </div>
+                    )}
+                  </div>
                 </div>
               )}
             </div>
@@ -187,6 +225,17 @@ const Navbar = () => {
       {isMobileMenuOpen && (
         <div className="md:hidden bg-black/95 backdrop-blur-lg border-b border-blue-500/20">
           <div className="px-4 pt-2 pb-6 space-y-2">
+            {/* INICIO */}
+            <button
+              className="block w-full text-left px-3 py-3 rounded-lg text-gray-300 hover:text-blue-400 hover:bg-blue-500/10 transition-colors text-base font-semibold"
+              onClick={() => {
+                setIsMobileMenuOpen(false);
+                handleInicio();
+              }}
+            >
+              INICIO
+            </button>
+
             {/* NOSOTROS */}
             <button
               className="block w-full text-left px-3 py-3 rounded-lg text-gray-300 hover:text-blue-400 hover:bg-blue-500/10 transition-colors text-base font-semibold"
@@ -217,6 +266,16 @@ const Navbar = () => {
               {isMobileProductsOpen && (
                 <div className="pl-6 space-y-1">
                   <Link
+                    to="/equipos-medicos"
+                    className="block px-3 py-2 rounded-lg text-gray-400 hover:text-blue-400 hover:bg-blue-500/10 transition-colors text-sm font-semibold"
+                    onClick={() => {
+                      setIsMobileMenuOpen(false);
+                      scrollToTop();
+                    }}
+                  >
+                    EQUIPOS MÉDICOS
+                  </Link>
+                  <Link
                     to="/lebrau"
                     className="block px-3 py-2 rounded-lg text-gray-400 hover:text-blue-400 hover:bg-blue-500/10 transition-colors text-sm font-semibold"
                     onClick={() => {
@@ -224,18 +283,34 @@ const Navbar = () => {
                       scrollToTop();
                     }}
                   >
-                    MARCA LEBRAU
+                    LEBRAU
                   </Link>
-                  <Link
-                    to="/otras-marcas"
-                    className="block px-3 py-2 rounded-lg text-gray-400 hover:text-blue-400 hover:bg-blue-500/10 transition-colors text-sm font-semibold"
-                    onClick={() => {
-                      setIsMobileMenuOpen(false);
-                      scrollToTop();
-                    }}
-                  >
-                    OTRAS MARCAS
-                  </Link>
+                  <div>
+                    <button
+                      type="button"
+                      className="flex items-center justify-between w-full px-3 py-2 rounded-lg text-gray-400 hover:text-blue-400 hover:bg-blue-500/10 transition-colors text-sm font-semibold"
+                      onClick={() => setIsMobileOtherBrandsOpen(!isMobileOtherBrandsOpen)}
+                    >
+                      <span>OTRAS MARCAS</span>
+                      <svg className={`w-4 h-4 transition-transform duration-200 ${isMobileOtherBrandsOpen ? 'rotate-90' : ''}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      </svg>
+                    </button>
+                    {isMobileOtherBrandsOpen && (
+                      <div className="pl-5 space-y-1">
+                        <Link
+                          to="/gmd-productos"
+                          className="block px-3 py-2 rounded-lg text-gray-400 hover:text-blue-400 hover:bg-blue-500/10 transition-colors text-sm font-semibold"
+                          onClick={() => {
+                            setIsMobileMenuOpen(false);
+                            scrollToTop();
+                          }}
+                        >
+                          GMD PRODUCTOS
+                        </Link>
+                      </div>
+                    )}
+                  </div>
                 </div>
               )}
             </div>

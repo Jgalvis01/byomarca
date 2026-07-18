@@ -29,6 +29,8 @@ const ContactSection = () => {
     }, 3000);
   };
 
+
+
   const contactInfo = [
     {
       icon: (
@@ -43,7 +45,9 @@ const ContactSection = () => {
     {
       icon: (
         <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 5a2 2 0 012-2h3.28a1 1 0 011 1v8a1 1 0 01-1 1H6.414l-3.293 3.293a1 1 0 01-1.707-.707V5z" />
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M7 4h10a2 2 0 012 2v12a2 2 0 01-2 2H7a2 2 0 01-2-2V6a2 2 0 012-2z" />
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 18h6" />
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M10 6h4" />
         </svg>
       ),
       title: 'Celular',
@@ -219,25 +223,27 @@ const ContactSection = () => {
             transition={{ duration: 0.8, ease: 'easeOut', delay: 0.2 }}
           >
             <div className="glass-card rounded-3xl p-8">
-              <h3 className="text-2xl font-bold text-white mb-8">
+              <h3 className="text-2xl font-bold text-white mb-8 text-center">
                 Información de contacto
               </h3>
               <div className="space-y-8">
                 {contactInfo.map((info, index) => (
                   <motion.div
                     key={index}
-                    className="flex items-start space-x-4"
+                    className="flex items-start gap-4"
                     initial={{ opacity: 0, x: 20 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
                   >
-                    <div className="w-14 h-14 rounded-xl bg-blue-500/20 flex items-center justify-center flex-shrink-0">
-                      <div className="text-blue-400">{info.icon}</div>
+                    <div className="w-14 h-14 rounded-xl bg-blue-500/20 flex items-center justify-center flex-shrink-0 text-blue-300">
+                      {info.icon}
                     </div>
-                    <div>
-                      <h4 className="text-white font-semibold mb-1 text-base">{info.title}</h4>
-                      <p className="text-gray-300 text-lg whitespace-pre-line font-medium">
+                    <div className="flex-1 min-w-0" style={{ textAlign: 'left' }}>
+                      <h4 className="text-white font-semibold mb-1 text-base" style={{ textAlign: 'left' }}>
+                        {info.title}
+                      </h4>
+                      <p className="text-gray-300 text-lg whitespace-pre-line font-medium" style={{ textAlign: 'left' }}>
                         {info.content}
                       </p>
                     </div>
