@@ -22,6 +22,7 @@ const EquiposMedicosPage = () => {
         product.name,
         product.ref,
         product.category,
+        product.brand || '',
         ...(product.specs?.map(s => `${s.label} ${s.value}`) || []),
       ]
         .join(' ')

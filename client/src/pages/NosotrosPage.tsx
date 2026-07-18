@@ -91,10 +91,11 @@ const NosotrosPage = () => {
             </svg>
           </div>
           <h3 className="text-xl font-semibold text-white mb-4 group-hover:text-blue-400 smooth-transition">
-            Equipos Médicos Especializados
+            Tecnología y Confianza
           </h3>
           <p className="text-gray-300 text-lg leading-relaxed">
-            Amplio portafolio de equipos médicos de alta tecnología para diagnóstico, monitoreo y tratamiento en instituciones de salud.
+            Conectamos tecnología médica de vanguardia con el cuidado que cada paciente merece. En BYOMARCA acompañamos a su entidad en todo el proceso:
+            desde la elección del equipo adecuado hasta su instalación, puesta en marcha y servicio post venta.
           </p>
         </motion.div>
 

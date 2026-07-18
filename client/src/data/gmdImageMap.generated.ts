@@ -62,6 +62,7 @@ export const gmdImageByRef: Record<string, string> = {
   "GMD-BPM-30F": "/images/GMD-BPM-30F Monitor.png",
   "GMD-BPM-30E": "/images/GMD-BPM-30E Monitor.png",
   "GMD-BPM-30C": "/images/GMD-BPM-30C Tensiometro.png",
+  "CDK-BPM-65B+": "/images/CDK-BPM-65B+.png",
   "CDK-BPM-65R": "/images/CDK-BPM-65R.png",
   "CDK-BPM-66EP": "/images/CDK-BPM-66EP.png",
   "CDK-BPM-75B": "/images/CDK-BPM-75B.png",
@@ -391,6 +392,9 @@ export const gmdGalleryByRef: Record<string, string[]> = {
   ],
   "GMD-BPM-30C": [
     "/images/GMD-BPM-30C Tensiometro.png"
+  ],
+  "CDK-BPM-65B+": [
+    "/images/CDK-BPM-65B+.png"
   ],
   "CDK-BPM-65R": [
     "/images/CDK-BPM-65R.png"

@@ -1,6 +1,7 @@
 import { useMemo, useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { findGmdProduct, slugifyGmdText } from '../data/gmdCatalog';
+import ImageZoomModal from '../components/ImageZoomModal';
 
 const GmdProductDetailPage = () => {
   const { productId } = useParams<{ productId: string }>();
@@ -10,6 +11,7 @@ const GmdProductDetailPage = () => {
   }, [productId]);
 
   const [selectedImage, setSelectedImage] = useState<string | undefined>(product?.image);
+  const [isZoomOpen, setIsZoomOpen] = useState(false);
 
   // Update selectedImage when product changes
   useEffect(() => {
@@ -109,13 +111,22 @@ const GmdProductDetailPage = () => {
 
             {/* Right Side: Photo Showcase */}
             <div className="flex flex-col items-center justify-start space-y-6">
-              <div className="relative aspect-square w-full max-w-md rounded-2xl overflow-hidden bg-white/5 border border-white/10 flex items-center justify-center p-8">
+              <button
+                type="button"
+                onClick={() => setIsZoomOpen(true)}
+                className="relative aspect-square w-full max-w-md rounded-2xl overflow-hidden bg-white/5 border border-white/10 flex items-center justify-center p-8 group cursor-zoom-in focus:outline-none focus:ring-2 focus:ring-blue-400/60 focus:ring-offset-2 focus:ring-offset-black"
+                aria-label={`Ampliar imagen de ${product.name}`}
+              >
                 <img
                   src={selectedImage || product.image}
                   alt={product.name}
-                  className="max-h-full max-w-full object-contain rounded-xl"
+                  className="max-h-full max-w-full object-contain rounded-xl transition-transform duration-300 group-hover:scale-[1.03]"
                 />
-              </div>
+
+                <span className="absolute bottom-4 right-4 rounded-full bg-black/65 border border-white/15 px-3 py-1 text-xs font-semibold text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                  Clic para ampliar
+                </span>
+              </button>
 
               {/* Gallery Thumbnails */}
               {product.gallery && product.gallery.length > 1 && (
@@ -143,6 +154,14 @@ const GmdProductDetailPage = () => {
 
           </div>
         </div>
+
+        {/* Zoom Modal */}
+        <ImageZoomModal
+          isOpen={isZoomOpen}
+          onClose={() => setIsZoomOpen(false)}
+          src={selectedImage || product.image}
+          alt={product.name}
+        />
 
       </div>
     </section>

@@ -23,14 +23,23 @@ const NovamedicaProductCard = ({ product, onClick }: NovamedicaProductCardProps)
       </div>
       <div className="flex flex-col flex-grow justify-between">
         <div>
-          <span className="text-[10px] uppercase tracking-wider text-sky-200 font-bold">
-            {product.category}
-          </span>
-          <h3 className="text-white font-bold text-base mt-1 line-clamp-2 hover:text-blue-400 transition-colors uppercase">
+          <div className="flex items-center gap-2 flex-wrap">
+            <span className="text-[10px] uppercase tracking-wider text-sky-200 font-bold">
+              {product.category}
+            </span>
+          </div>
+          <h3 className="text-white font-bold text-base mt-1 mb-2 line-clamp-2 hover:text-blue-400 transition-colors uppercase">
             {product.name}
           </h3>
+          {product.brand && (
+            <div className="mt-1">
+              <span className="text-[10px] uppercase tracking-wider bg-blue-500/20 text-blue-300 px-2 py-0.5 rounded-full font-bold">
+                Marca: {product.brand}
+              </span>
+            </div>
+          )}
         </div>
-        <div className="mt-4 pt-3 border-t border-sky-200/20 flex justify-between items-center text-xs text-slate-200/90">
+        <div className="mt-3 pt-3 border-t border-sky-200/20 flex justify-between items-center text-xs text-slate-200/90">
           <span>Ref: {product.ref}</span>
           <span className="text-sky-200 font-bold">Ver →</span>
         </div>

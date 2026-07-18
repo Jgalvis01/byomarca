@@ -19,7 +19,7 @@ const GmdProductosPage = () => {
 
   // ── Category nodes (default view) ──
   const sortedNodes = useMemo(() => {
-    const nodes = gmdCatalog.flatMap((category) => category.children);
+    const nodes = gmdCatalog;
     return [...nodes].sort((a, b) => {
       const aLabel = a.kind === 'group' ? a.title : a.name;
       const bLabel = b.kind === 'group' ? b.title : b.name;
@@ -189,7 +189,7 @@ const GmdProductosPage = () => {
                   node={node}
                   onClick={() => {
                     if (node.kind === 'group') {
-                      navigate(`/gmd-productos/categoria/${encodeURIComponent(node.category)}/${node.slug}`);
+                      navigate(`/gmd-productos/categoria/${node.slug}`);
                       return;
                     }
 

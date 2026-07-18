@@ -1,4 +1,5 @@
 export interface NovamedicaProduct {
+  brand?: string;
   id: string;
   name: string;
   ref: string;
@@ -14,6 +15,7 @@ export const novamedicaProducts: NovamedicaProduct[] = [
     "id": "sys-6010",
     "name": "Bombas de Infusión",
     "ref": "SYS-6010",
+    "brand": "MEDCAPTAIN",
     "category": "Bombas de Infusión",
     "image": "/images/SYS-6010.jpeg",
     "gallery": [
@@ -51,6 +53,7 @@ export const novamedicaProducts: NovamedicaProduct[] = [
     "id": "mp-60",
     "name": "Bombas de Infusión",
     "ref": "MP-60",
+    "brand": "MEDCAPTAIN",
     "category": "Bombas de Infusión",
     "image": "/images/MP-60.jpeg",
     "gallery": [
@@ -100,6 +103,7 @@ export const novamedicaProducts: NovamedicaProduct[] = [
     "id": "mp-30",
     "name": "Bombas de Infusión",
     "ref": "MP-30",
+    "brand": "MEDCAPTAIN",
     "category": "Bombas de Infusión",
     "image": "/images/MP-30.jpeg",
     "gallery": [
@@ -149,6 +153,7 @@ export const novamedicaProducts: NovamedicaProduct[] = [
     "id": "hp-60",
     "name": "Bombas de Infusión",
     "ref": "HP-60",
+    "brand": "MEDCAPTAIN",
     "category": "Bombas de Infusión",
     "image": "/images/HP-60.jpeg",
     "gallery": [
@@ -202,6 +207,7 @@ export const novamedicaProducts: NovamedicaProduct[] = [
     "id": "skk-b",
     "name": "Camilla de Transporte",
     "ref": "SKK-B",
+    "brand": "SAIKANG MEDICAL",
     "category": "Camilla de Transporte",
     "image": "/images/SKK-B.jpeg",
     "gallery": [
@@ -244,6 +250,7 @@ export const novamedicaProducts: NovamedicaProduct[] = [
     "id": "sd1",
     "name": "Dopples (Doppler Fetal)",
     "ref": "SD1",
+    "brand": "EDAN",
     "category": "Dopples (Doppler Fetal)",
     "image": "/images/SD1.png",
     "gallery": [
@@ -280,6 +287,7 @@ export const novamedicaProducts: NovamedicaProduct[] = [
     "id": "sd3-pro",
     "name": "Dopples (Doppler Fetal)",
     "ref": "SD3 PRO",
+    "brand": "EDAN",
     "category": "Dopples (Doppler Fetal)",
     "image": "/images/SD3 PRO.png",
     "gallery": [
@@ -317,6 +325,7 @@ export const novamedicaProducts: NovamedicaProduct[] = [
     "id": "basic-a-sonotrax",
     "name": "Dopples (Doppler Fetal)",
     "ref": "BASIC A (Sonotrax)",
+    "brand": "EDAN",
     "category": "Dopples (Doppler Fetal)",
     "image": "/images/BASIC A.png",
     "gallery": [
@@ -350,6 +359,7 @@ export const novamedicaProducts: NovamedicaProduct[] = [
     "id": "ii-pro-sonotrax",
     "name": "Dopples (Doppler Fetal)",
     "ref": "II PRO (Sonotrax)",
+    "brand": "EDAN",
     "category": "Dopples (Doppler Fetal)",
     "image": "/images/II PRO.png",
     "gallery": [
@@ -391,6 +401,7 @@ export const novamedicaProducts: NovamedicaProduct[] = [
     "id": "skk-m",
     "name": "Carro de Paro",
     "ref": "SKK-M",
+    "brand": "SAIKANG MEDICAL",
     "category": "Carro de Paro",
     "image": "/images/SKK-M.png",
     "gallery": [
@@ -434,7 +445,8 @@ export const novamedicaProducts: NovamedicaProduct[] = [
   {
     "id": "amoul-i2",
     "name": "Desfibriladores",
-    "ref": "Amoul i2",
+    "ref": "AMOUL I2",
+    "brand": "AMOUL",
     "category": "Desfibriladores",
     "image": "/images/AMOUL I2.png",
     "gallery": [
@@ -470,7 +482,8 @@ export const novamedicaProducts: NovamedicaProduct[] = [
   {
     "id": "amoul-i6",
     "name": "Desfibriladores",
-    "ref": "Amoul i6",
+    "ref": "AMOUL I6",
+    "brand": "AMOUL",
     "category": "Desfibriladores",
     "image": "/images/AMOUL I6.png",
     "gallery": [
@@ -508,6 +521,7 @@ export const novamedicaProducts: NovamedicaProduct[] = [
     "id": "amoul-i7-plus-dea",
     "name": "Desfibriladores",
     "ref": "Amoul i7 Plus (DEA)",
+    "brand": "AMOUL",
     "category": "Desfibriladores",
     "image": "/images/AMOUL I7 PLUS.png",
     "gallery": [
@@ -552,7 +566,8 @@ export const novamedicaProducts: NovamedicaProduct[] = [
   {
     "id": "acclarix-ax2",
     "name": "Ecógrafos (Sistema de Diagnóstico Ultrasonido)",
-    "ref": "Acclarix AX2",
+    "ref": "ACCLARIX AX2",
+    "brand": "EDAN",
     "category": "Ecógrafos (Sistema de Diagnóstico Ultrasonido)",
     "image": "/images/ACCLARIX AX2.png",
     "gallery": [
@@ -608,7 +623,8 @@ export const novamedicaProducts: NovamedicaProduct[] = [
   {
     "id": "acclarix-ax3",
     "name": "Ecógrafos (Sistema de Diagnóstico Ultrasonido)",
-    "ref": "Acclarix AX3",
+    "ref": "ACCLARIX AX3",
+    "brand": "EDAN",
     "category": "Ecógrafos (Sistema de Diagnóstico Ultrasonido)",
     "image": "/images/ACCLARIX AX3.png",
     "gallery": [
@@ -668,7 +684,8 @@ export const novamedicaProducts: NovamedicaProduct[] = [
   {
     "id": "acclarix-ax8",
     "name": "Ecógrafos (Sistema de Diagnóstico Ultrasonido)",
-    "ref": "Acclarix AX8",
+    "ref": "ACCLARIX AX8",
+    "brand": "EDAN",
     "category": "Ecógrafos (Sistema de Diagnóstico Ultrasonido)",
     "image": "/images/ACCLARIX AX8.png",
     "gallery": [
@@ -716,7 +733,8 @@ export const novamedicaProducts: NovamedicaProduct[] = [
   {
     "id": "acclarix-lx3",
     "name": "Ecógrafos (Sistema de Diagnóstico Ultrasonido)",
-    "ref": "Acclarix LX3",
+    "ref": "ACCLARIX LX3",
+    "brand": "EDAN",
     "category": "Ecógrafos (Sistema de Diagnóstico Ultrasonido)",
     "image": "/images/ACCLARIX LX3.png",
     "gallery": [
@@ -768,7 +786,8 @@ export const novamedicaProducts: NovamedicaProduct[] = [
   {
     "id": "acclarix-lx9",
     "name": "Ecógrafos (Sistema de Diagnóstico Ultrasonido)",
-    "ref": "Acclarix LX9",
+    "ref": "ACCLARIX LX9",
+    "brand": "EDAN",
     "category": "Ecógrafos (Sistema de Diagnóstico Ultrasonido)",
     "image": "/images/ACCLARIX LX9.png",
     "gallery": [
@@ -817,6 +836,7 @@ export const novamedicaProducts: NovamedicaProduct[] = [
     "id": "se-3",
     "name": "Electrocardiógrafos",
     "ref": "SE-3",
+    "brand": "EDAN",
     "category": "Electrocardiógrafos",
     "image": "/images/SE-3.png",
     "gallery": [
@@ -869,6 +889,7 @@ export const novamedicaProducts: NovamedicaProduct[] = [
     "id": "se-301",
     "name": "Electrocardiógrafos",
     "ref": "SE-301",
+    "brand": "EDAN",
     "category": "Electrocardiógrafos",
     "image": "/images/SE-301.png",
     "gallery": [
@@ -917,6 +938,7 @@ export const novamedicaProducts: NovamedicaProduct[] = [
     "id": "se-601c",
     "name": "Electrocardiógrafos",
     "ref": "SE-601C",
+    "brand": "EDAN",
     "category": "Electrocardiógrafos",
     "image": "/images/SE-601C.png",
     "gallery": [
@@ -968,7 +990,8 @@ export const novamedicaProducts: NovamedicaProduct[] = [
   {
     "id": "se-1200-express",
     "name": "Electrocardiógrafos",
-    "ref": "SE-1200 Express",
+    "ref": "SE-1200 EXPRESS",
+    "brand": "EDAN",
     "category": "Electrocardiógrafos",
     "image": "/images/SE-1200 EXPRESS.png",
     "gallery": [
@@ -1013,6 +1036,7 @@ export const novamedicaProducts: NovamedicaProduct[] = [
     "id": "se-1201-pro",
     "name": "Electrocardiógrafos",
     "ref": "SE-1201 PRO",
+    "brand": "EDAN",
     "category": "Electrocardiógrafos",
     "image": "/images/SE-1201 PRO.png",
     "gallery": [
@@ -1053,6 +1077,7 @@ export const novamedicaProducts: NovamedicaProduct[] = [
     "id": "dt-400s",
     "name": "Electrobisturí",
     "ref": "DT-400S",
+    "brand": "DAIWHA/MEDITOM",
     "category": "Electrobisturí",
     "image": "/images/DT-400S.png",
     "gallery": [
@@ -1093,6 +1118,7 @@ export const novamedicaProducts: NovamedicaProduct[] = [
     "id": "dt-200s",
     "name": "Electrobisturí",
     "ref": "DT-200S",
+    "brand": "DAIWHA/MEDITOM",
     "category": "Electrobisturí",
     "image": "/images/DT-200S.png",
     "gallery": [
@@ -1133,6 +1159,7 @@ export const novamedicaProducts: NovamedicaProduct[] = [
     "id": "prueba-de-esfuerzo-se-1515",
     "name": "Holters y Prueba de Esfuerzo",
     "ref": "Prueba de Esfuerzo SE-1515",
+    "brand": "EDAN",
     "category": "Holters y Prueba de Esfuerzo",
     "image": "/images/SE-1515.png",
     "gallery": [
@@ -1173,6 +1200,7 @@ export const novamedicaProducts: NovamedicaProduct[] = [
     "id": "trotadora-tmx-428",
     "name": "Holters y Prueba de Esfuerzo",
     "ref": "Trotadora TMx-428",
+    "brand": "SCHILLER",
     "category": "Holters y Prueba de Esfuerzo",
     "image": "/images/TMX-428.png",
     "gallery": [
@@ -1205,6 +1233,7 @@ export const novamedicaProducts: NovamedicaProduct[] = [
     "id": "sistema-holter-se-2003",
     "name": "Holters y Prueba de Esfuerzo",
     "ref": "Sistema Holter SE-2003",
+    "brand": "EDAN",
     "category": "Holters y Prueba de Esfuerzo",
     "image": "/images/SE-2003.png",
     "gallery": [
@@ -1245,6 +1274,7 @@ export const novamedicaProducts: NovamedicaProduct[] = [
     "id": "monitos-de-presi-n-arterial-ambulatorio-mapa-sa-10",
     "name": "Holters y Prueba de Esfuerzo",
     "ref": "Monitos de Presión Arterial Ambulatorio (MAPA) SA-10",
+    "brand": "EDAN",
     "category": "Holters y Prueba de Esfuerzo",
     "image": "/images/SA-10.png",
     "gallery": [
@@ -1285,6 +1315,7 @@ export const novamedicaProducts: NovamedicaProduct[] = [
     "id": "yp-3000",
     "name": "Incubadoras y Lámparas de Calor Radiante",
     "ref": "YP-3000",
+    "brand": "NINGBO DAVID MEDICAL",
     "category": "Incubadoras y Lámparas de Calor Radiante",
     "image": "/images/YP-3000.png",
     "gallery": [
@@ -1334,6 +1365,7 @@ export const novamedicaProducts: NovamedicaProduct[] = [
     "id": "yp-920",
     "name": "Incubadoras y Lámparas de Calor Radiante",
     "ref": "YP-920",
+    "brand": "NINGBO DAVID MEDICAL",
     "category": "Incubadoras y Lámparas de Calor Radiante",
     "image": "/images/YP-920.png",
     "gallery": [
@@ -1379,6 +1411,7 @@ export const novamedicaProducts: NovamedicaProduct[] = [
     "id": "yp-800",
     "name": "Incubadoras y Lámparas de Calor Radiante",
     "ref": "YP-800",
+    "brand": "NINGBO DAVID MEDICAL",
     "category": "Incubadoras y Lámparas de Calor Radiante",
     "image": "/images/YP-800.png",
     "gallery": [
@@ -1440,6 +1473,7 @@ export const novamedicaProducts: NovamedicaProduct[] = [
     "id": "ti-2000",
     "name": "Incubadoras y Lámparas de Calor Radiante",
     "ref": "TI-2000",
+    "brand": "NINGBO DAVID MEDICAL",
     "category": "Incubadoras y Lámparas de Calor Radiante",
     "image": "/images/TI-2000.png",
     "gallery": [
@@ -1485,6 +1519,7 @@ export const novamedicaProducts: NovamedicaProduct[] = [
     "id": "ti-2100b",
     "name": "Incubadoras y Lámparas de Calor Radiante",
     "ref": "TI-2100B",
+    "brand": "NINGBO DAVID MEDICAL",
     "category": "Incubadoras y Lámparas de Calor Radiante",
     "image": "/images/TI-2100B.png",
     "gallery": [
@@ -1529,6 +1564,7 @@ export const novamedicaProducts: NovamedicaProduct[] = [
     "id": "hkn-93c-l-mpara-de-calor-radiante",
     "name": "Incubadoras y Lámparas de Calor Radiante",
     "ref": "HKN-93C (Lámpara de calor radiante)",
+    "brand": "NINGBO DAVID MEDICAL",
     "category": "Incubadoras y Lámparas de Calor Radiante",
     "image": "/images/HKN-93C.png",
     "gallery": [
@@ -1582,6 +1618,7 @@ export const novamedicaProducts: NovamedicaProduct[] = [
     "id": "hkn-9010",
     "name": "Incubadoras y Lámparas de Calor Radiante",
     "ref": "HKN-9010",
+    "brand": "NINGBO DAVID MEDICAL",
     "category": "Incubadoras y Lámparas de Calor Radiante",
     "image": "/images/HKN-9010.png",
     "gallery": [
@@ -1618,6 +1655,7 @@ export const novamedicaProducts: NovamedicaProduct[] = [
     "id": "hkn-93b",
     "name": "Incubadoras y Lámparas de Calor Radiante",
     "ref": "HKN-93B",
+    "brand": "NINGBO DAVID MEDICAL",
     "category": "Incubadoras y Lámparas de Calor Radiante",
     "image": "/images/HKN-93B.png",
     "gallery": [
@@ -1659,6 +1697,7 @@ export const novamedicaProducts: NovamedicaProduct[] = [
     "id": "navi-60",
     "name": "Iluminador de Venas",
     "ref": "NAVI-60",
+    "brand": "MEDCAPTAIN",
     "category": "Iluminador de Venas",
     "image": "/images/NAVI-60.png",
     "gallery": [
@@ -1703,6 +1742,7 @@ export const novamedicaProducts: NovamedicaProduct[] = [
     "id": "xhz-90p",
     "name": "Lámparas de Fototerapia",
     "ref": "XHZ-90P",
+    "brand": "NINGBO DAVID MEDICAL",
     "category": "Lámparas de Fototerapia",
     "image": "/images/XHZ-90P.png",
     "gallery": [
@@ -1739,6 +1779,7 @@ export const novamedicaProducts: NovamedicaProduct[] = [
     "id": "xhz-90l",
     "name": "Lámparas de Fototerapia",
     "ref": "XHZ-90L",
+    "brand": "NINGBO DAVID MEDICAL",
     "category": "Lámparas de Fototerapia",
     "image": "/images/XHZ-90L.png",
     "gallery": [
@@ -1771,6 +1812,7 @@ export const novamedicaProducts: NovamedicaProduct[] = [
     "id": "xhz-90",
     "name": "Lámparas de Fototerapia",
     "ref": "XHZ-90",
+    "brand": "NINGBO DAVID MEDICAL",
     "category": "Lámparas de Fototerapia",
     "image": "/images/XHZ-90.png",
     "gallery": [
@@ -1811,6 +1853,7 @@ export const novamedicaProducts: NovamedicaProduct[] = [
     "id": "ls800-750",
     "name": "Lámparas de Cirugía",
     "ref": "LS800-750",
+    "brand": "BENQ",
     "category": "Lámparas de Cirugía",
     "image": "/images/LS800-750.png",
     "gallery": [
@@ -1853,6 +1896,7 @@ export const novamedicaProducts: NovamedicaProduct[] = [
     "id": "ls800-550",
     "name": "Lámparas de Cirugía",
     "ref": "LS800-550",
+    "brand": "BENQ",
     "category": "Lámparas de Cirugía",
     "image": "/images/LS800-550.png",
     "gallery": [
@@ -1894,6 +1938,7 @@ export const novamedicaProducts: NovamedicaProduct[] = [
     "id": "olm-9550-l-mpara-piel-tica",
     "name": "Lámparas de Cirugía",
     "ref": "OLM-9550 (Lámpara Pielítica)",
+    "brand": "BENQ",
     "category": "Lámparas de Cirugía",
     "image": "/images/OLM-9550.png",
     "gallery": [
@@ -1934,6 +1979,7 @@ export const novamedicaProducts: NovamedicaProduct[] = [
     "id": "boaray-700",
     "name": "Máquinas de Anestesia",
     "ref": "BOARAY 700",
+    "brand": "PRUNUS",
     "category": "Máquinas de Anestesia",
     "image": "/images/BOARAY 700.png",
     "gallery": [
@@ -1979,6 +2025,7 @@ export const novamedicaProducts: NovamedicaProduct[] = [
     "id": "boaray-600d",
     "name": "Máquinas de Anestesia",
     "ref": "BOARAY 600D",
+    "brand": "PRUNUS",
     "category": "Máquinas de Anestesia",
     "image": "/images/BOARAY 600D.png",
     "gallery": [
@@ -2028,6 +2075,7 @@ export const novamedicaProducts: NovamedicaProduct[] = [
     "id": "pumila-750d",
     "name": "Máquinas de Anestesia",
     "ref": "PUMILA 750D",
+    "brand": "PRUNUS",
     "category": "Máquinas de Anestesia",
     "image": "/images/PUMILA 750D.png",
     "gallery": [
@@ -2081,6 +2129,7 @@ export const novamedicaProducts: NovamedicaProduct[] = [
     "id": "dr-max-7000skb",
     "name": "Mesas de Cirugía",
     "ref": "DR. MAX 7000SKB",
+    "brand": "DR. MAX",
     "category": "Mesas de Cirugía",
     "image": "/images/7000SKB.png",
     "gallery": [
@@ -2122,6 +2171,7 @@ export const novamedicaProducts: NovamedicaProduct[] = [
     "id": "not-5600skf",
     "name": "Mesas de Cirugía",
     "ref": "NOT-5600SKF",
+    "brand": "BENQ",
     "category": "Mesas de Cirugía",
     "image": "/images/NOT-5600SKF.png",
     "gallery": [
@@ -2163,6 +2213,7 @@ export const novamedicaProducts: NovamedicaProduct[] = [
     "id": "f6-express",
     "name": "Monitores Fetales",
     "ref": "F6 Express",
+    "brand": "EDAN",
     "category": "Monitores Fetales",
     "image": "/images/MONITOR FETAL F6 EXPRESS.png",
     "gallery": [
@@ -2204,6 +2255,7 @@ export const novamedicaProducts: NovamedicaProduct[] = [
     "id": "f3",
     "name": "Monitores Fetales",
     "ref": "F3",
+    "brand": "BENQ",
     "category": "Monitores Fetales",
     "image": "/images/MONITOR FETAL F3.png",
     "gallery": [
@@ -2240,7 +2292,8 @@ export const novamedicaProducts: NovamedicaProduct[] = [
   {
     "id": "f9-express",
     "name": "Monitores Fetales",
-    "ref": "F9 Express",
+    "ref": "F9 EXPRESS",
+    "brand": "EDAN",
     "category": "Monitores Fetales",
     "image": "/images/MONITOR FETAL F9 EXPRESS.png",
     "gallery": [
@@ -2269,7 +2322,8 @@ export const novamedicaProducts: NovamedicaProduct[] = [
   {
     "id": "f15-air",
     "name": "Monitores Fetales",
-    "ref": "F15 Air",
+    "ref": "F15 AIR",
+    "brand": "EDAN",
     "category": "Monitores Fetales",
     "image": "/images/MONITOR FETAL F15 AIR.png",
     "gallery": [
@@ -2318,7 +2372,8 @@ export const novamedicaProducts: NovamedicaProduct[] = [
   {
     "id": "monitor-x8",
     "name": "Monitores de Paciente",
-    "ref": "Monitor X8",
+    "ref": "MONITOR X8",
+    "brand": "EDAN",
     "category": "Monitores de Paciente",
     "image": "/images/MONITOR X8.png",
     "gallery": [
@@ -2359,7 +2414,8 @@ export const novamedicaProducts: NovamedicaProduct[] = [
   {
     "id": "monitor-x12",
     "name": "Monitores de Paciente",
-    "ref": "Monitor X12",
+    "ref": "MONITOR X12",
+    "brand": "EDAN",
     "category": "Monitores de Paciente",
     "image": "/images/MONITOR X12.png",
     "gallery": [
@@ -2405,6 +2461,7 @@ export const novamedicaProducts: NovamedicaProduct[] = [
     "id": "monitor-im50",
     "name": "Monitores de Paciente",
     "ref": "Monitor iM50",
+    "brand": "EDAN",
     "category": "Monitores de Paciente",
     "image": "/images/MONITOR IM50.png",
     "gallery": [
@@ -2446,6 +2503,7 @@ export const novamedicaProducts: NovamedicaProduct[] = [
     "id": "monitor-im3s",
     "name": "Monitores de Paciente",
     "ref": "Monitor iM3s",
+    "brand": "EDAN",
     "category": "Monitores de Paciente",
     "image": "/images/MONITOR IM3S.png",
     "gallery": [
@@ -2483,6 +2541,7 @@ export const novamedicaProducts: NovamedicaProduct[] = [
     "id": "monitor-im70",
     "name": "Monitores de Paciente",
     "ref": "Monitor iM70",
+    "brand": "EDAN",
     "category": "Monitores de Paciente",
     "image": "/images/MONITOR IM70.png",
     "gallery": [
@@ -2519,7 +2578,8 @@ export const novamedicaProducts: NovamedicaProduct[] = [
   {
     "id": "monitor-elite-v5",
     "name": "Monitores de Paciente",
-    "ref": "Monitor Elite V5",
+    "ref": "MONITOR ELITE V5",
+    "brand": "EDAN",
     "category": "Monitores de Paciente",
     "image": "/images/MONITOR ELITE V5.png",
     "gallery": [
@@ -2560,6 +2620,7 @@ export const novamedicaProducts: NovamedicaProduct[] = [
     "id": "monitor-im20",
     "name": "Monitores de Paciente",
     "ref": "Monitor iM20",
+    "brand": "EDAN",
     "category": "Monitores de Paciente",
     "image": "/images/MONITOR IM20.png",
     "gallery": [
@@ -2596,6 +2657,7 @@ export const novamedicaProducts: NovamedicaProduct[] = [
     "id": "h100b",
     "name": "Oxímetro",
     "ref": "H100B",
+    "brand": "EDAN",
     "category": "Oxímetro",
     "image": "/images/H100B.png",
     "gallery": [
@@ -2634,6 +2696,7 @@ export const novamedicaProducts: NovamedicaProduct[] = [
     "id": "yx-980d",
     "name": "Succionadores",
     "ref": "YX-980D",
+    "brand": "SMAF",
     "category": "Succionadores",
     "image": "/images/YX-980D.png",
     "gallery": [
@@ -2670,6 +2733,7 @@ export const novamedicaProducts: NovamedicaProduct[] = [
     "id": "yx-930d",
     "name": "Succionadores",
     "ref": "YX-930D",
+    "brand": "SMAF",
     "category": "Succionadores",
     "image": "/images/YX-930D.png",
     "gallery": [
@@ -2710,6 +2774,7 @@ export const novamedicaProducts: NovamedicaProduct[] = [
     "id": "sxt-5a",
     "name": "Succionadores",
     "ref": "SXT-5A",
+    "brand": "SMAF",
     "category": "Succionadores",
     "image": "/images/SXT-5A.png",
     "gallery": [
@@ -2754,7 +2819,8 @@ export const novamedicaProducts: NovamedicaProduct[] = [
   {
     "id": "amoul-t6",
     "name": "Ventiladores",
-    "ref": "Amoul T6",
+    "ref": "AMOUL T6",
+    "brand": "AMOUL",
     "category": "Ventiladores",
     "image": "/images/AMOUL T6.png",
     "gallery": [
@@ -2804,6 +2870,7 @@ export const novamedicaProducts: NovamedicaProduct[] = [
     "id": "padus-8",
     "name": "Ventiladores",
     "ref": "PADUS 8",
+    "brand": "PRUNUS",
     "category": "Ventiladores",
     "image": "/images/PADUS 8.png",
     "gallery": [
@@ -2857,6 +2924,7 @@ export const novamedicaProducts: NovamedicaProduct[] = [
     "id": "padus-5",
     "name": "Ventiladores",
     "ref": "PADUS 5",
+    "brand": "PRUNUS",
     "category": "Ventiladores",
     "image": "/images/PADUS 5.png",
     "gallery": [
@@ -2910,6 +2978,7 @@ export const novamedicaProducts: NovamedicaProduct[] = [
     "id": "vl-3d",
     "name": "Videolaringoscopios",
     "ref": "VL-3D",
+    "brand": "HUGEMED",
     "category": "Videolaringoscopios",
     "image": "/images/VL-3D.png",
     "gallery": [
@@ -2947,6 +3016,7 @@ export const novamedicaProducts: NovamedicaProduct[] = [
     "id": "vl-3r",
     "name": "Videolaringoscopios",
     "ref": "VL-3R",
+    "brand": "HUGEMED",
     "category": "Videolaringoscopios",
     "image": "/images/VL-3R.png",
     "gallery": [
@@ -2988,6 +3058,7 @@ export const novamedicaProducts: NovamedicaProduct[] = [
     "id": "c6a",
     "name": "Videocolposcopio",
     "ref": "C6A",
+    "brand": "EDAN",
     "category": "Videocolposcopio",
     "image": "/images/C6A.png",
     "gallery": [

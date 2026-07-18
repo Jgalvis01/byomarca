@@ -1,6 +1,7 @@
 import { useMemo, useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { novamedicaProducts } from '../data/novamedicaData';
+import ImageZoomModal from '../components/ImageZoomModal';
 
 const NovamedicaProductDetailPage = () => {
   const { productId } = useParams<{ productId: string }>();
@@ -10,6 +11,7 @@ const NovamedicaProductDetailPage = () => {
   }, [productId]);
 
   const [activeImage, setActiveImage] = useState<string>('');
+  const [isZoomOpen, setIsZoomOpen] = useState(false);
 
   useEffect(() => {
     if (product) {
@@ -52,12 +54,21 @@ const NovamedicaProductDetailPage = () => {
             {/* Left Side: Specifications & Description */}
             <div className="space-y-8">
               <div>
-                <span className="text-xs uppercase tracking-widest text-blue-400 font-bold">
-                  {product.category}
-                </span>
+                <div className="flex items-center gap-3 flex-wrap">
+                  <span className="text-xs uppercase tracking-widest text-blue-400 font-bold">
+                    {product.category}
+                  </span>
+                </div>
                 <h1 className="text-3xl md:text-4xl font-bold text-white mt-2 mb-4 leading-tight">
                   {product.ref}
                 </h1>
+                {product.brand && (
+                  <div className="mb-4 flex justify-center">
+                    <span className="text-sm uppercase tracking-widest bg-blue-500/20 text-blue-300 px-3 py-1 rounded-full font-bold">
+                      Marca: {product.brand}
+                    </span>
+                  </div>
+                )}
               </div>
 
               {/* Technical Specifications */}
@@ -103,13 +114,22 @@ const NovamedicaProductDetailPage = () => {
 
             {/* Right Side: Photo Showcase */}
             <div className="flex flex-col items-center space-y-6">
-              <div className="relative aspect-square w-full max-w-md rounded-2xl overflow-hidden bg-white/5 border border-white/10 flex items-center justify-center p-8">
+              <button
+                type="button"
+                onClick={() => setIsZoomOpen(true)}
+                className="relative aspect-square w-full max-w-md rounded-2xl overflow-hidden bg-white/5 border border-white/10 flex items-center justify-center p-8 group cursor-zoom-in focus:outline-none focus:ring-2 focus:ring-blue-400/60 focus:ring-offset-2 focus:ring-offset-black"
+                aria-label={`Ampliar imagen de ${product.ref}`}
+              >
                 <img
                   src={activeImage || product.image}
                   alt={product.ref}
-                  className="max-h-full max-w-full object-contain rounded-xl transition-all duration-300"
+                  className="max-h-full max-w-full object-contain rounded-xl transition-all duration-300 group-hover:scale-[1.03]"
                 />
-              </div>
+
+                <span className="absolute bottom-4 right-4 rounded-full bg-black/65 border border-white/15 px-3 py-1 text-xs font-semibold text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                  Clic para ampliar
+                </span>
+              </button>
 
               {/* Thumbnails Gallery */}
               {product.gallery && product.gallery.length > 1 && (
@@ -136,6 +156,14 @@ const NovamedicaProductDetailPage = () => {
 
           </div>
         </div>
+
+        {/* Zoom Modal */}
+        <ImageZoomModal
+          isOpen={isZoomOpen}
+          onClose={() => setIsZoomOpen(false)}
+          src={activeImage || product.image}
+          alt={product.ref}
+        />
 
       </div>
     </section>

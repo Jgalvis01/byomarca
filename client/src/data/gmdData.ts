@@ -730,12 +730,15 @@ export const gmdProducts: GmdProduct[] = [
   },
   {
     "id": "cdk-bpm-65b",
-    "ref": "CDK-BPM-65B",
-    "name": "+ Bateria Digital Carditek Power Recargable + Pantalla retroiluminada Tensiómetro",
-    "description": "+ Bateria Digital Carditek Power Recargable + Pantalla retroiluminada Tensiómetro",
+    "ref": "CDK-BPM-65B+",
+    "name": "Tensiómetro Digital Carditek Power Bateria Recargable + Pantalla retroiluminada",
+    "description": "Tensiómetro Digital Carditek Power Bateria Recargable + Pantalla retroiluminada",
     "category": "Confort",
-    "subcategory": "Tens",
-    "image": "/images/PR5.jpg"
+    "subcategory": "Tensiómetros",
+    "image": "/images/CDK-BPM-65B+.png",
+    "gallery": [
+      "/images/CDK-BPM-65B+.png"
+    ]
   },
   {
     "id": "cdk-bpm-66ep",

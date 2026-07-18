@@ -43,6 +43,11 @@ const normalizeText = (text: string) =>
     .replace(/\s+/g, ' ')
     .trim();
 
+const normalizeRefKey = (ref: string) =>
+  ref
+    .toUpperCase()
+    .replace(/\s+/g, '');
+
 const slugify = (text: string) =>
   normalizeText(text).replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
 
@@ -70,7 +75,7 @@ const parseLeafLine = (text: string) => {
     }
   }
 
-  if (!/^[A-Z0-9][A-Z0-9.\-+/ ]*[A-Z0-9]$/i.test(ref) || !/[A-Z]/i.test(ref)) {
+  if (!/^[A-Z0-9][A-Z0-9.\-+/ ]*[A-Z0-9+]$/i.test(ref) || !/[A-Z]/i.test(ref)) {
     return null;
   }
 
@@ -81,7 +86,7 @@ const parseLeafLine = (text: string) => {
 };
 
 const resolveImage = (ref: string) => {
-  const normalizedRef = ref.toUpperCase();
+  const normalizedRef = normalizeRefKey(ref);
   return gmdImageByRef[normalizedRef] ?? '/images/PR5.jpg';
 };
 
@@ -144,7 +149,7 @@ const buildCatalog = () => {
           category,
           subcategory,
           image: resolveImage(leaf.ref),
-          gallery: gmdGalleryByRef[leaf.ref.toUpperCase()] ?? [],
+          gallery: gmdGalleryByRef[normalizeRefKey(leaf.ref)] ?? [],
           path,
           level: depth,
         };
@@ -174,6 +179,129 @@ const buildCatalog = () => {
 
       stack.push(group);
     });
+
+  // Post-process: flatten/remove specific sub-categories
+  const flattenSubgroups = (parent: GmdCatalogGroup, slugsToFlatten: string[]) => {
+    const newChildren: GmdCatalogNode[] = [];
+    for (const child of parent.children) {
+      if (child.kind === 'group' && slugsToFlatten.includes(child.slug)) {
+        // Pull children up into parent
+        const extractAll = (node: GmdCatalogNode): GmdCatalogNode[] => {
+          if (node.kind === 'product') return [node];
+          return node.children.flatMap(extractAll);
+        };
+        newChildren.push(...extractAll(child));
+      } else {
+        newChildren.push(child);
+      }
+    }
+    parent.children = newChildren;
+  };
+
+  const removeSubgroups = (parent: GmdCatalogGroup, slugsToRemove: string[]) => {
+    parent.children = parent.children.filter(
+      (child) => !(child.kind === 'group' && slugsToRemove.includes(child.slug))
+    );
+  };
+
+  const keepOnlySubgroups = (parent: GmdCatalogGroup, slugsToKeep: string[]) => {
+    const newChildren: GmdCatalogNode[] = [];
+    for (const child of parent.children) {
+      if (child.kind === 'group') {
+        if (slugsToKeep.includes(child.slug)) {
+          newChildren.push(child);
+        } else {
+          // Flatten: extract all products from this group
+          const extractAll = (node: GmdCatalogNode): GmdCatalogNode[] => {
+            if (node.kind === 'product') return [node];
+            return node.children.flatMap(extractAll);
+          };
+          newChildren.push(...extractAll(child));
+        }
+      } else {
+        newChildren.push(child);
+      }
+    }
+    parent.children = newChildren;
+  };
+
+  const flattenAllSubgroups = (parent: GmdCatalogGroup) => {
+    const extractAll = (node: GmdCatalogNode): GmdCatalogNode[] => {
+      if (node.kind === 'product') return [node];
+      return node.children.flatMap(extractAll);
+    };
+    parent.children = parent.children.flatMap((child) => {
+      if (child.kind === 'group') return extractAll(child);
+      return [child];
+    });
+  };
+
+  const findGroup = (parent: GmdCatalogGroup, slug: string): GmdCatalogGroup | undefined => {
+    for (const child of parent.children) {
+      if (child.kind === 'group' && child.slug === slug) return child;
+    }
+    return undefined;
+  };
+
+  for (const root of roots) {
+    // ACTIVIDADES DE LA VIDA DIARIA
+    if (root.slug === 'actividades-de-la-vida-diaria') {
+      const higiene = findGroup(root, 'higiene');
+      if (higiene) {
+        flattenSubgroups(higiene, ['comodos', 'eleva-sanitarios', 'sillas-para-ducha']);
+      }
+      const lineaBlanda = findGroup(root, 'linea-blanda');
+      if (lineaBlanda) {
+        flattenSubgroups(lineaBlanda, ['cabestrillos', 'rodilleras']);
+      }
+    }
+
+    // INSTRUMENTOS
+    if (root.slug === 'instrumentos') {
+      const instDiag = findGroup(root, 'instrumentos-de-diagnostico');
+      if (instDiag) {
+        keepOnlySubgroups(instDiag, [
+          'fonendoscopios-ois',
+          'rptos-fonendos',
+          'rptos-tensiometro',
+          'rptos-tensiometros',
+          'goniometros',
+        ]);
+      }
+      const instQuir = findGroup(root, 'instrumentos-quirurgicos');
+      if (instQuir) {
+        flattenAllSubgroups(instQuir);
+      }
+    }
+
+    // MOVILIDAD
+    if (root.slug === 'movilidad') {
+      const sedest = findGroup(root, 'sedestacion-y-posicionamiento');
+      if (sedest) {
+        keepOnlySubgroups(sedest, ['sillas-de-ruedas-estandar']);
+      }
+      const caminadores = findGroup(root, 'caminadores');
+      if (caminadores) {
+        removeSubgroups(caminadores, ['repuestos-para-caminadores']);
+      }
+      const muletas = findGroup(root, 'muletas');
+      if (muletas) {
+        removeSubgroups(muletas, ['repuestos-para-muletas']);
+      }
+      const bastones1 = findGroup(root, 'bastones-1-apoyo');
+      if (bastones1) {
+        removeSubgroups(bastones1, ['repuestos-para-baston-1-apoyo']);
+      }
+    }
+
+    // TERAPIA RESPIRATORIA
+    if (root.slug === 'terapia-respiratoria') {
+      const aerosol = findGroup(root, 'aerosolterapia');
+      if (aerosol) {
+        removeSubgroups(aerosol, ['kits-nebulizacion']);
+      }
+    }
+  }
 
   return { roots, allProducts };
 };
