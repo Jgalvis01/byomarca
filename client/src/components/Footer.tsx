@@ -97,7 +97,23 @@ const Footer = () => {
                     d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"
                   />
                 </svg>
-                <span>3150495039</span>
+                <span>315 049 5039</span>
+              </li>
+              <li className="flex items-center space-x-3">
+                <svg
+                  className="w-6 h-6 text-blue-400 flex-shrink-0"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"
+                  />
+                </svg>
+                <span>318 168 9031</span>
               </li>
               <li className="flex items-center space-x-3">
                 <svg

@@ -151,9 +151,9 @@ const GmdCategoryPage = () => {
           <div>
             <h1 className="text-4xl md:text-5xl font-bold font-montserrat text-white">
               {nestedSegments.length > 0 ? (
-                <>Apartado: <span className="text-gradient uppercase">{categoryTitle}</span></>
+                <span className="text-gradient uppercase">{categoryTitle}</span>
               ) : (
-                <>Categoría: <span className="text-gradient uppercase">{categoryNode.title}</span></>
+                <span className="text-gradient uppercase">{categoryNode.title}</span>
               )}
             </h1>
             <p className="mt-4 text-gray-300 max-w-3xl leading-relaxed">

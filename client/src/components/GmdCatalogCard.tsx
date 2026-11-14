@@ -6,8 +6,19 @@ interface GmdCatalogCardProps {
   onClick: () => void;
 }
 
+const categoryImages: Record<string, string> = {
+  'actividades-de-la-vida-diaria': '/images/Gemini_Generated_Image_qejpn7qejpn7qejp.webp',
+  'confort': '/images/Gemini_Generated_Image_xnkncpxnkncpxnkn.webp',
+  'control-y-prevencion': '/images/Gemini_Generated_Image_i6b7o0i6b7o0i6b7.webp',
+  'instrumentos': '/images/Gemini_Generated_Image_pkmh8wpkmh8wpkmh.webp',
+  'movilidad': '/images/Gemini_Generated_Image_mw22g8mw22g8mw22.webp',
+  'terapia-respiratoria': '/images/Gemini_Generated_Image_p08de5p08de5p08d.webp',
+};
+
 const GmdCatalogCard = ({ node, onClick }: GmdCatalogCardProps) => {
   if (node.kind === 'group') {
+    const rootImage = node.level === 0 ? categoryImages[node.slug] : undefined;
+
     return (
       <motion.button
         type="button"
@@ -15,18 +26,23 @@ const GmdCatalogCard = ({ node, onClick }: GmdCatalogCardProps) => {
         onClick={onClick}
         className="glass-card rounded-2xl p-5 border border-sky-300/55 bg-[#151F3F] shadow-[0_18px_40px_rgba(0,0,0,0.35)] flex flex-col justify-between h-full text-left hover:border-sky-200/80 hover:bg-[#1a2750] transition-all duration-300 blue-glow group"
       >
-        <div className="space-y-3">
-          <div className="w-12 h-12 rounded-2xl bg-sky-400/20 border border-sky-200/30 flex items-center justify-center text-sky-100 font-bold">
-            {node.title.slice(0, 1).toUpperCase()}
-          </div>
-          <div>
-            <span className="text-[10px] uppercase tracking-[0.3em] text-sky-200 font-bold">Apartado</span>
+        <div className="flex flex-col flex-grow">
+          {rootImage ? (
+            <div className="aspect-video rounded-xl bg-slate-900/85 border border-sky-300/15 mb-4 overflow-hidden shrink-0">
+              <img src={rootImage} alt={node.title} loading="lazy" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+            </div>
+          ) : (
+            <div className="w-12 h-12 rounded-2xl bg-sky-400/20 border border-sky-200/30 flex items-center justify-center text-sky-100 font-bold mb-4 shrink-0">
+              {node.title.slice(0, 1).toUpperCase()}
+            </div>
+          )}
+          <div className="flex flex-col justify-end flex-grow">
             <h3 className="text-white font-bold text-base mt-2 line-clamp-3 uppercase hover:text-sky-100 transition-colors">
               {node.title}
             </h3>
           </div>
         </div>
-        <div className="mt-6 pt-4 border-t border-sky-200/20 flex justify-between items-center text-xs text-slate-200/90">
+        <div className="mt-6 pt-4 border-t border-sky-200/20 flex justify-between items-center text-xs text-slate-200/90 shrink-0">
           <span>{node.children.length} elementos</span>
           <span className="text-sky-200 font-bold">Ver →</span>
         </div>
@@ -41,10 +57,11 @@ const GmdCatalogCard = ({ node, onClick }: GmdCatalogCardProps) => {
       onClick={onClick}
       className="glass-card rounded-2xl p-4 border border-sky-300/45 bg-[#151F3F] shadow-[0_18px_40px_rgba(0,0,0,0.35)] flex flex-col h-full text-left hover:border-sky-200/75 hover:bg-[#1a2750] transition-all duration-300 blue-glow group"
     >
-      <div className="aspect-square rounded-xl bg-slate-900/85 border border-sky-300/15 p-4 flex items-center justify-center mb-4 overflow-hidden">
+      <div className="aspect-square rounded-xl bg-slate-900/85 border border-sky-300/15 p-4 flex items-center justify-center mb-4 overflow-hidden shrink-0">
         <img
           src={node.image}
           alt={node.name}
+          loading="lazy"
           className="max-h-full max-w-full object-contain"
         />
       </div>
@@ -60,7 +77,7 @@ const GmdCatalogCard = ({ node, onClick }: GmdCatalogCardProps) => {
             {node.description}
           </p>
         </div>
-        <div className="mt-4 pt-3 border-t border-sky-200/20 flex justify-between items-center text-xs text-slate-200/90">
+        <div className="mt-4 pt-3 border-t border-sky-200/20 flex justify-between items-center text-xs text-slate-200/90 shrink-0">
           <span>Ref: {node.ref}</span>
           <span className="text-sky-200 font-bold">Ver →</span>
         </div>

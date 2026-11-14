@@ -99,7 +99,7 @@ const PageLoader = ({ isLoading }: PageLoaderProps) => {
 
             {/* Logo image */}
             <motion.img
-              src="/images/LOGO BYOMARCA1 (1).png"
+              src="/images/LOGO BYOMARCA1 (1).webp"
               alt="BYOMARCA"
               className="relative z-10 w-64 h-auto"
               style={{

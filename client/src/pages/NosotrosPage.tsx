@@ -6,7 +6,7 @@ const NosotrosPage = () => {
       {/* Logo on Top Left */}
       <div className="absolute top-24 left-8">
         <img
-          src="/images/LOGO BYOMARCA1 (1).png"
+          src="/images/LOGO BYOMARCA1 (1).webp"
           alt="BYOMARCA"
           className="h-16 w-auto"
         />
@@ -24,7 +24,7 @@ const NosotrosPage = () => {
           >
             <div className="aspect-[4/3] rounded-3xl overflow-hidden glass-card">
               <img
-                src="/images/nosotros.png"
+                src="/images/nosotros.webp"
                 alt="Misión BYOMARCA"
                 className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
               />

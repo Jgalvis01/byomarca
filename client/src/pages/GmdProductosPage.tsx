@@ -21,8 +21,8 @@ const GmdProductosPage = () => {
   const sortedNodes = useMemo(() => {
     const nodes = gmdCatalog;
     return [...nodes].sort((a, b) => {
-      const aLabel = a.kind === 'group' ? a.title : a.name;
-      const bLabel = b.kind === 'group' ? b.title : b.name;
+      const aLabel = a.kind === 'group' ? a.title : (a as any).name;
+      const bLabel = b.kind === 'group' ? b.title : (b as any).name;
       return aLabel.localeCompare(bLabel, 'es', { sensitivity: 'base' });
     });
   }, []);

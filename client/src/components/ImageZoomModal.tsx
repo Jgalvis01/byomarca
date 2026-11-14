@@ -176,7 +176,7 @@ const ImageZoomModal = ({ isOpen, onClose, src, alt }: ImageZoomModalProps) => {
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            className="absolute top-0 left-0 right-0 flex items-center justify-between px-4 sm:px-6 py-3 z-20"
+            className="absolute top-2 sm:top-4 left-0 right-0 flex items-center justify-between px-4 sm:px-6 py-3 z-20"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Zoom controls */}
@@ -253,17 +253,26 @@ const ImageZoomModal = ({ isOpen, onClose, src, alt }: ImageZoomModalProps) => {
             />
           </motion.div>
 
-          {/* Bottom hint */}
+          {/* Bottom hint & Mobile Close Button */}
           {scale <= 1 && (
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              className="absolute bottom-6 left-0 right-0 text-center"
+              className="absolute bottom-6 left-0 right-0 text-center flex flex-col items-center"
               onClick={(e) => e.stopPropagation()}
             >
-              <span className="text-white/40 text-xs font-medium px-4 py-2 rounded-full bg-white/5 border border-white/10 backdrop-blur-sm">
+              <button
+                onClick={onClose}
+                className="mb-4 bg-blue-600/80 hover:bg-blue-500 text-white font-bold py-2.5 px-8 rounded-full shadow-lg border border-blue-400/50 sm:hidden transition-colors backdrop-blur-md"
+              >
+                Cerrar Imagen
+              </button>
+              <span className="text-white/40 text-xs font-medium px-4 py-2 rounded-full bg-white/5 border border-white/10 backdrop-blur-sm hidden sm:inline-block">
                 Scroll o pellizcar para zoom · Doble clic para ampliar · Esc para cerrar
+              </span>
+              <span className="text-white/40 text-[10px] font-medium px-4 py-2 rounded-full bg-white/5 border border-white/10 backdrop-blur-sm sm:hidden">
+                Pellizcar para zoom · Doble toque para ampliar
               </span>
             </motion.div>
           )}

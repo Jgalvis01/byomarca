@@ -1,5 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useLocation } from 'react-router-dom';
+import ImageZoomModal from '../components/ImageZoomModal';
 
 const categories = [
   {
@@ -30,7 +32,7 @@ const productDataMap: Record<string, ProductDetails> = {
     ref: 'SR10D',
     category: 'Mobiliario Hospitalario Premium',
     description: 'Silla reclinable mecánica de brazo ancho para mayor soporte y comodidad del paciente.',
-    images: ['/images/kento.png', '/images/kento1.png', '/images/kento2.png'],
+    images: ['/images/kento.webp', '/images/kento1.webp', '/images/kento2.webp'],
     specs: [
       { label: 'Uso Ideal', value: 'Procedimientos de larga duración (Diálisis, Quimioterapia) y salas de lactancia.' },
       { label: 'Mecanismo', value: 'Reclinación mecánica por empuje.' },
@@ -51,7 +53,7 @@ const productDataMap: Record<string, ProductDetails> = {
     ref: 'SR10R',
     category: 'Mobiliario Hospitalario Premium',
     description: 'Silla reclinable mecánica de brazo ancho para mayor soporte y comodidad del paciente.',
-    images: ['/images/kento.png', '/images/kento1.png', '/images/kento2.png', '/images/kento3.png'],
+    images: ['/images/kento.webp', '/images/kento1.webp', '/images/kento2.webp', '/images/kento3.webp'],
     specs: [
       { label: 'Uso Ideal', value: 'Procedimientos de larga duración (Diálisis, Quimioterapia) y salas de lactancia.' },
       { label: 'Mecanismo', value: 'Reclinación mecánica por empuje.' },
@@ -73,7 +75,7 @@ const productDataMap: Record<string, ProductDetails> = {
     ref: 'SR20D',
     category: 'Mobiliario Hospitalario / Clínico',
     description: 'Silla reclinable mecánica diseñada para entornos de salud y cuidado intensivo.',
-    images: ['/images/nagy.png', '/images/nagy1.png', '/images/nagy2.png'],
+    images: ['/images/nagy.webp', '/images/nagy1.webp', '/images/nagy2.webp'],
     specs: [
       { label: 'Uso Ideal', value: 'Posoperatorio, Diálisis, Quimioterapia, Observación, Descanso, Terapia Respiratoria, Lactancia.' },
       { label: 'Mecanismo', value: 'Reclinación mecánica accionable mediante el empuje del espaldar (hacia atrás).' },
@@ -93,7 +95,7 @@ const productDataMap: Record<string, ProductDetails> = {
     ref: 'SR20R',
     category: 'Mobiliario Hospitalario / Clínico',
     description: 'Silla reclinable mecánica diseñada para entornos de salud y cuidado intensivo con movilidad.',
-    images: ['/images/nagy.png', '/images/nagy1.png', '/images/nagy2.png', '/images/nagy3.png'],
+    images: ['/images/nagy.webp', '/images/nagy1.webp', '/images/nagy2.webp', '/images/nagy3.webp'],
     specs: [
       { label: 'Uso Ideal', value: 'Posoperatorio, Diálisis, Quimioterapia, Observación, Descanso, Terapia Respiratoria, Lactancia.' },
       { label: 'Mecanismo', value: 'Reclinación mecánica accionable mediante el empuje del espaldar (hacia atrás).' },
@@ -114,7 +116,7 @@ const productDataMap: Record<string, ProductDetails> = {
     ref: 'SC30R',
     category: 'Mobiliario Hospitalario / Clínico',
     description: 'Sofá Cama Premium con mecanismo de 3 cuerpos de apertura suave y tapizado antibacterial.',
-    images: ['/images/sofa1.png', '/images/sofa2.png', '/images/sofa3.png', '/images/sofa4.png'],
+    images: ['/images/sofa1.webp', '/images/sofa2.webp', '/images/sofa3.webp', '/images/sofa4.webp'],
     specs: [
       { label: 'Mecanismo', value: 'Metálico de 3 cuerpos (3C) con apertura suave.' },
       { label: 'Acolchado', value: 'Espuma Croydon de doble densidad en espaldar, tendido y frontal.' },
@@ -134,7 +136,7 @@ const productDataMap: Record<string, ProductDetails> = {
     ref: 'SAES01',
     category: 'Salas de Espera Premium (1 Puesto)',
     description: 'Sistema modular de configuración libre (1 puesto), diseñado para áreas de alto tráfico y salas de espera institucionales.',
-    images: ['/images/saes01.jpg', '/images/saes01-1.jpg', '/images/saes01-2.jpg', '/images/saes01-3.jpg'],
+    images: ['/images/saes01.webp', '/images/saes01-1.webp', '/images/saes01-2.webp', '/images/saes01-3.webp'],
     specs: [
       { label: 'Dimensiones', value: 'Ancho: 0.60 m · Profundidad: 0.65 m · Alto: 0.84 m · Altura de sentadero: 0.44 m' },
       { label: 'Estructura Inferior', value: 'Metálica en tubo rectangular de 1" x 2" calibre 16, con platinas laterales en lámina HR calibre 1/8", acabado en pintura electrostática.' },
@@ -148,7 +150,7 @@ const productDataMap: Record<string, ProductDetails> = {
     ref: 'SAES02',
     category: 'Salas de Espera Premium (2 Puestos)',
     description: 'Sistema modular de configuración libre (2 puestos), ideal para pasillos y salas de espera comunes en instituciones de salud.',
-    images: ['/images/saes02.jpg', '/images/saes02-1.jpg', '/images/saes02-2.jpg'],
+    images: ['/images/saes02.webp', '/images/saes02-1.webp', '/images/saes02-2.webp'],
     specs: [
       { label: 'Dimensiones', value: 'Ancho: 1.20 m · Profundidad: 0.65 m · Alto: 0.84 m · Altura de sentadero: 0.44 m' },
       { label: 'Estructura Inferior', value: 'Metálica en tubo rectangular de 1" x 2" calibre 16, con platinas laterales en lámina HR calibre 1/8", acabado en pintura electrostática.' },
@@ -163,9 +165,21 @@ const productDataMap: Record<string, ProductDetails> = {
 const LebrauSection = () => {
   const [activeProduct, setActiveProduct] = useState<string | null>(null);
   const [activeImageIndex, setActiveImageIndex] = useState(0);
+  const [isZoomOpen, setIsZoomOpen] = useState(false);
   const expandedViewRef = useRef<HTMLDivElement>(null);
+  const location = useLocation();
 
   const productData = activeProduct ? productDataMap[activeProduct] : null;
+
+  useEffect(() => {
+    if (location.hash) {
+      const hashRef = location.hash.replace('#', '');
+      if (productDataMap[hashRef]) {
+        setActiveProduct(hashRef);
+        setActiveImageIndex(0);
+      }
+    }
+  }, [location.hash]);
 
   useEffect(() => {
     if (!activeProduct) {
@@ -195,22 +209,22 @@ const LebrauSection = () => {
           transition={{ duration: 0.8, ease: 'easeOut' }}
         >
           <img 
-            src="/images/logolebraunew.png" 
+            src="/images/logolebraunew.webp" 
             alt="LEBRAU" 
             className="h-24 md:h-36 lg:h-48 w-auto drop-shadow-[0_0_20px_rgba(0,136,255,0.7)]"
             style={{ filter: 'brightness(1.1) drop-shadow(0 0 20px rgba(0,136,255,0.7))' }}
           />
           <p className="text-gray-300 text-lg md:text-xl text-center max-w-4xl mt-8 leading-relaxed font-medium">
-            La marca Lebrau reune diseño y versatilidad en productos médicos, ofreciendo una línea completa de mobiliario clínico, soluciones de diagnóstico y otras alternativas que responden a las necesidades del sector salud.
+            La marca Lebrau reúne diseño y versatilidad en productos médicos, ofreciendo una línea completa de mobiliario clínico, soluciones de diagnóstico y otras alternativas que responden a las necesidades del sector salud.
           </p>
         </motion.div>
 
         {/* 3 Columns Layout */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
           {categories.map((category, idx) => {
-            let catImage = '/images/kento.png';
-            if (category.title === 'Sofácamas Grado Médico') catImage = '/images/sofa1.png';
-            if (category.title === 'Salas de Espera Clínicas') catImage = '/images/saes02.jpg';
+            let catImage = '/images/kento.webp';
+            if (category.title === 'Sofácamas Grado Médico') catImage = '/images/sofa1.webp';
+            if (category.title === 'Salas de Espera Clínicas') catImage = '/images/saes02.webp';
 
             return (
               <motion.div
@@ -321,26 +335,36 @@ const LebrauSection = () => {
 
                 {/* Right Side: Photo Gallery */}
                 <div className="flex flex-col space-y-6">
-                  <div className="relative aspect-[4/3] rounded-2xl overflow-hidden bg-white/5 border border-white/10 flex items-center justify-center p-4">
-                    <img
-                      src={productData.images[activeImageIndex]}
-                      alt={`${productData.ref} view`}
-                      className="max-h-full max-w-full object-contain rounded-xl"
-                    />
+                  <div className="relative aspect-[4/3] rounded-2xl overflow-hidden bg-white/5 border border-white/10 flex items-center justify-center p-4 group">
+                    <button
+                      type="button"
+                      onClick={() => setIsZoomOpen(true)}
+                      className="absolute inset-0 z-0 flex items-center justify-center cursor-zoom-in focus:outline-none"
+                      aria-label={`Ampliar imagen de ${productData.ref}`}
+                    >
+                      <img
+                        src={productData.images[activeImageIndex]}
+                        alt={`${productData.ref} view`}
+                        className="max-h-full max-w-full object-contain rounded-xl transition-transform duration-300 group-hover:scale-[1.03]"
+                      />
+                      <span className="absolute bottom-4 right-4 rounded-full bg-black/65 border border-white/15 px-3 py-1 text-xs font-semibold text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                        Clic para ampliar
+                      </span>
+                    </button>
 
                     {productData.images.length > 1 && (
                       <>
                         <button
-                          onClick={() => setActiveImageIndex((prev) => (prev === 0 ? productData.images.length - 1 : prev - 1))}
-                          className="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/60 border border-white/20 flex items-center justify-center text-white hover:bg-black/80 transition-colors"
+                          onClick={(e) => { e.stopPropagation(); setActiveImageIndex((prev) => (prev === 0 ? productData.images.length - 1 : prev - 1)); }}
+                          className="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/60 border border-white/20 flex items-center justify-center text-white hover:bg-black/80 transition-colors z-10"
                         >
                           <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
                           </svg>
                         </button>
                         <button
-                          onClick={() => setActiveImageIndex((prev) => (prev === productData.images.length - 1 ? 0 : prev + 1))}
-                          className="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/60 border border-white/20 flex items-center justify-center text-white hover:bg-black/80 transition-colors"
+                          onClick={(e) => { e.stopPropagation(); setActiveImageIndex((prev) => (prev === productData.images.length - 1 ? 0 : prev + 1)); }}
+                          className="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/60 border border-white/20 flex items-center justify-center text-white hover:bg-black/80 transition-colors z-10"
                         >
                           <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -370,6 +394,16 @@ const LebrauSection = () => {
             </motion.div>
           )}
         </AnimatePresence>
+
+        {/* Zoom Modal */}
+        {activeProduct && productData && (
+          <ImageZoomModal
+            isOpen={isZoomOpen}
+            onClose={() => setIsZoomOpen(false)}
+            src={productData.images[activeImageIndex]}
+            alt={`Vista ampliada de ${productData.ref}`}
+          />
+        )}
       </div>
     </section>
   );

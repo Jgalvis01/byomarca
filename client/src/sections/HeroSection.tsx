@@ -142,7 +142,7 @@ const HeroSection = () => {
 
             {/* Logo image with float */}
             <motion.img
-              src="/images/LOGO BYOMARCA1 (1).png"
+              src="/images/LOGO BYOMARCA1 (1).webp"
               alt="BYOMARCA"
               className="relative z-10 w-full max-w-3xl h-auto"
               style={{
@@ -162,23 +162,23 @@ const HeroSection = () => {
         </div>
 
         {/* Text Container with AnimatePresence */}
-        <div className="relative h-24 flex items-center justify-center w-full mt-6">
+        <div className="relative h-56 sm:h-40 md:h-32 flex items-center justify-center w-full mt-4 sm:mt-6">
           <AnimatePresence mode="wait">
             {!isScrolled ? (
               <motion.h2
                 key="slogan"
-                className="absolute text-2xl md:text-3xl lg:text-4xl font-bold text-white tracking-wide"
+                className="absolute text-2xl md:text-3xl lg:text-4xl font-bold text-white tracking-wide px-4"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -20 }}
                 transition={{ duration: 0.5, ease: 'easeOut' }}
               >
-                Calidad que refleja compromiso
+                Confianza clínica en cada producto
               </motion.h2>
             ) : (
               <motion.p
                 key="description"
-                className="absolute text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed font-medium text-center px-4"
+                className="absolute text-base sm:text-lg md:text-xl lg:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed font-medium text-center px-6"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -20 }}

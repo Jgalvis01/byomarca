@@ -35,7 +35,7 @@ const scriptDir = path.dirname(fileURLToPath(import.meta.url));
 const clientDir = path.resolve(scriptDir, '..');
 const repoDir   = path.resolve(clientDir, '..');
 
-const productListPath  = path.join(repoDir, 'Productos_Lista_Mayo2026.txt');
+const productListPath  = path.join(clientDir, 'src', 'data', 'Productos_Lista_Mayo2026.txt');
 const imagesDir        = path.join(clientDir, 'public', 'images');
 const gmdOutputPath    = path.join(clientDir, 'src', 'data', 'gmdImageMap.generated.ts');
 const novamedicaPath   = path.join(clientDir, 'src', 'data', 'novamedicaData.ts');

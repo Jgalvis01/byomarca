@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import { NavLink, Link, useNavigate, useLocation } from 'react-router-dom';
+import SearchOverlay from './SearchOverlay';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -8,6 +9,7 @@ const Navbar = () => {
   const [isOtherBrandsOpen, setIsOtherBrandsOpen] = useState(false);
   const [isMobileProductsOpen, setIsMobileProductsOpen] = useState(false);
   const [isMobileOtherBrandsOpen, setIsMobileOtherBrandsOpen] = useState(false);
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
   const navigate = useNavigate();
   const location = useLocation();
@@ -50,6 +52,7 @@ const Navbar = () => {
   };
 
   return (
+    <>
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         !isHomePage || isScrolled
@@ -158,6 +161,7 @@ const Navbar = () => {
 
             {/* BUSCAR */}
             <button
+              onClick={() => setIsSearchOpen(true)}
               className="transition-colors duration-200 text-base font-semibold tracking-wide text-gray-200 hover:text-blue-400"
               aria-label="Buscar"
             >
@@ -317,6 +321,10 @@ const Navbar = () => {
 
             {/* BUSCAR */}
             <button
+              onClick={() => {
+                setIsMobileMenuOpen(false);
+                setIsSearchOpen(true);
+              }}
               className="flex items-center space-x-3 w-full text-left px-3 py-3 rounded-lg text-gray-300 hover:text-blue-400 hover:bg-blue-500/10 transition-colors text-base font-semibold"
             >
               <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -352,6 +360,10 @@ const Navbar = () => {
         </div>
       )}
     </nav>
+
+    {/* Global Search Overlay */}
+    <SearchOverlay isOpen={isSearchOpen} onClose={() => setIsSearchOpen(false)} />
+    </>
   );
 };
 
